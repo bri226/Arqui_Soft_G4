@@ -49,8 +49,10 @@ Algunos casos de uso:
 
 ### 3.1. Usuario
 - Registro de Usuarios (RFU-01): Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
-- Inicio de Sesión (RFU-02): Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
-- Gestión de Perfil (RFU-03): Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección y foto de perfil.
+- Correo de confirmación (RFU-02): Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
+- Inicio de Sesión (RFU-03): Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
+- Inicio Erroneo (RFU-04): Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
+- Gestión de Perfil (RFU-05): Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección y foto de perfil.
 ### 3.2. Catálogo de libros
 - Búsqueda de Libros (RFCL-01): Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación.
 - Exploración de Categorías (RFCL-02): Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
