@@ -48,9 +48,19 @@ Algunos casos de uso:
 ## 3. Requerimientos funcionales
 
 ### 3.1. Usuario
-
+- Registro de Usuarios (RFU-01): Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
+- Inicio de Sesión (RFU-02): Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
+- Gestión de Perfil (RFU-03): Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección y foto de perfil.
 ### 3.2. Catálogo de libros
-
+- Búsqueda de Libros (RFCL-01): Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación.
+- Exploración de Categorías (RFCL-02): Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
+- Detalles del Libro (RFCL-03): Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
 ### 3.3. Sistema de pagos
-
+- Procesamiento de Pagos (RFSP-01): El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
+- Gestión de Métodos de Pago (RFSP-02): Los usuarios pueden agregar, editar o eliminar métodos de pago, como tarjetas de crédito o cuentas bancarias.
+- Confirmación de Pagos (RFSP-03): Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
 ### 3.4. Envío y logísticas
+- Cálculo de Costos de Envío (RFEL-01): El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
+- Seguimiento de Envíos (RFEL-02): Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
+- Opciones de Envío (RFEL-03): Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
+- Gestión de Devoluciones (RFEL-04): Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
