@@ -52,7 +52,13 @@ Algunos casos de uso:
 - Correo de confirmación (RFU-02): Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
 - Inicio de Sesión (RFU-03): Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
 - Inicio Erroneo (RFU-04): Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
-- Gestión de Perfil (RFU-05): Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección y foto de perfil.
+- Gestión de Perfil (RFU-05): Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
+- Gestion de Historial (RFU-06) : Los usuarios pueden ver y editar su historial de intercambio de libros
+- Busqueda de Usuario (RFU-07) : Los usuarios pueden realizar la busqueda de otros usuarios en la plataforma y visualizar sus perfiles, ingresando como parametros de busqueda nombre de usuario , nombre real o género literario preferido
+- Enviar solicitud de Amistad (RFU-08) : Los usuarios pueden crear nuevas amistades en la pagina , enviando solicitudes de amistad.
+- Gestion de amistades (RFU-09) : Los usuarios pueden aceptar o rechazar las solicitudes de amistad pendientes y pueden visualizar su lista de amigos.
+- Mensajeria con usuarios (RFU-10) : Los usuarios pueden enviar mensajes privados a los amigos a los cuales previamente hayan realizado una conexión.
+
 ### 3.2. Catálogo de libros
 - Búsqueda de Libros (RFCL-01): Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación.
 - Exploración de Categorías (RFCL-02): Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
