@@ -1,4 +1,26 @@
-# CASO DE NEGOCIO: BOOKSWAP
+# CASO DE NEGOCIO
+
+## LISTA DE PENDIENTES
+
+- [ ] Crear los mockups de la plataforma web
+- [ ] Definir cuáles serán los módulos
+- [ ] <b>Estructura</b>
+    - [ ] <b>Caso de Negocio</b>
+        - [ ] Contexto
+        - [ ] Objetivos de negocio que motivan el desarrollo de sw
+        - [ ] Definir stakeholders (depende de los objetivos)
+    - [ ] <b>Requerimientos</b> (deben ser por módulo, si hay req. transversales, definirlos tmbn) 
+        - [ ] <b>Requerimientos Funcionales</b>: Acotar o ampliar funcionalidad de soluciones tradicionales. Respaldados por mockups o prototipos.
+        - [ ] <b>Escenarios a nivel de atributos de calidad</b>: Además de su relación con los req. de sistema.
+        - [ ] <b>Restricciones</b>: Factores sobre los que no hay influencia directa.
+        - [ ] <b>Decisiones a nivel de arquitectura</b>: Usar categorías vistas en el curso.
+    - [ ] <b>Tácticas </b>: A nivel de disponibilidad, mantenibilidad, interoperabilidad, rendimiento, seguridad
+    - [ ] <b>Tópicos en Arquitectura de SW (Cada uno) </b>: Se coloca como anexo. Se elabora un video explicativo y mostrando código de demo.
+     - [ ] Desarrollo conceptual
+     - [ ] Consideraciones técnicas: instalación y configuración
+     - [ ] <b>Código</b>: Escenario de aplicación y realizar una implementación simple. Colocarlo en el github del grupo.
+
+
 
 ## 1. Generalidades
 Es una plataforma en línea que conecta a entusiastas de la lectura que desean comprar y vender libros de segunda mano. La plataforma está diseñada para brindar a los usuarios una experiencia fácil y conveniente para intercambiar libros usados, fomentando la reutilización y el reciclaje de libros y promoviendo la comunidad lectora.
