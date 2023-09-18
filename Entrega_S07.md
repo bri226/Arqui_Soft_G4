@@ -72,7 +72,3 @@ Algunos casos de uso:
 - Seguimiento de Envíos (RFEL-02): Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
 - Opciones de Envío (RFEL-03): Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
 - Gestión de Devoluciones (RFEL-04): Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
-
-## BUSINESS MODEL CANVAS
-![img1](bmc.jpg)
-
