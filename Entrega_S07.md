@@ -6,8 +6,8 @@
 - [ ] Definir cuáles serán los módulos
 - [ ] <b>Estructura</b>
     - [ ] <b>Caso de Negocio</b>
-        - [ ] Contexto
-        - [ ] Objetivos de negocio que motivan el desarrollo de sw
+        - [ ] Contexto :  Bri
+        - [ ] Objetivos de negocio que motivan el desarrollo de sw : Bri
         - [ ] Definir stakeholders (depende de los objetivos)
     - [ ] <b>Requerimientos</b> (deben ser por módulo, si hay req. transversales, definirlos tmbn) 
         - [ ] <b>Requerimientos Funcionales</b>: Acotar o ampliar funcionalidad de soluciones tradicionales. Respaldados por mockups o prototipos.
@@ -36,22 +36,6 @@ Algunos casos de uso:
 - Gestión de amigos (en caso se pudiera hacer como una especie de red social)
 
 ### 2.2. Catálogo de libros
-#### Casos de uso comprador:
-- Buscar libros: Los compradores pueden buscar libros por título, autor, género u otros criterios relevantes.
-- Explorar categorías: Los compradores pueden explorar diferentes categorías o géneros de libros para descubrir nuevas lecturas o encontrar libros que se ajusten a sus intereses.
-- Ver detalles del libro: Los compradores pueden hacer clic en un libro en particular para ver información detallada, como la descripción, el estado del libro (nuevo o usado), el precio y la ubicación del vendedor.
-- Agregar libros al carrito: Los compradores pueden agregar libros que deseen comprar a su carrito de compras virtual para realizar una transacción posterior.
-- Calificaciones y reseñas: Los compradores pueden ver las calificaciones y reseñas de otros usuarios sobre un libro en particular para tomar decisiones informadas sobre su compra.
-- Filtrar resultados: Los compradores pueden aplicar filtros para refinar los resultados de búsqueda, como filtrar por precio, ubicación del vendedor, estado del libro, etc.
-- Guardar libros favoritos: Los compradores pueden guardar libros que les interesen en una lista de "Favoritos" para acceder fácilmente a ellos en el futuro.
-- Ver disponibilidad y ubicación: Los compradores pueden verificar la disponibilidad de un libro y la ubicación del vendedor para determinar si es conveniente para ellos.
-- Notificaciones de nuevos libros: Los compradores pueden optar por recibir notificaciones cuando se agreguen nuevos libros que coincidan con sus intereses o criterios de búsqueda.
-  
-#### Casos de uso vendedor:
-- Crear listados de libros: Los vendedores pueden crear listados de libros que deseen vender o intercambiar. Pueden agregar detalles como título, autor, descripción, precio y estado del libro.
-- Gestionar disponibilidad: Los vendedores pueden gestionar la disponibilidad de sus libros en la plataforma, marcándolos como disponibles o no disponibles.
-- Editar listados de libros: Los vendedores pueden editar la información de los listados de libros existentes, como cambiar el precio, actualizar la descripción o cambiar el estado del libro.
-- Eliminar listados de libros: Los vendedores pueden eliminar listados de libros que ya no deseen vender o intercambiar.
 
 ### 2.3. Sistema de pagos
 Algunos casos de uso:
@@ -94,3 +78,15 @@ Algunos casos de uso:
 - Seguimiento de Envíos (RFEL-02): Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
 - Opciones de Envío (RFEL-03): Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
 - Gestión de Devoluciones (RFEL-04): Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
+
+
+STAKEHOLDERS
+Usuario
+Jefe de proyecto
+Administrador de Base de Datos
+Diseñador
+Implementador
+Especialista en Despliegue
+Responsable de pruebas
+Responsable de Mantenimiento
+Ingeniero de sistemas
