@@ -16,7 +16,7 @@ En comparación con las bases de datos relacionales, las bases de datos document
 | Modelo de Datos                  | Utilizan tablas y relaciones complejas entre tablas para representar datos. | Utilizan modelos de datos basados en documentos (por ejemplo, JSON o BSON) para representar datos, lo que permite una estructura más flexible y anidada. |
 
 
-### 1.2 Ventajas y desventajas del uso
+### 1.2 Ventajas y desventajas del uso de base de datos no relacionales
 En la tabla inferior se visualizarán cuales son las ventajas y desventajas del uso de los motores de base de datos no relacionales.
 | Ventajas                                       | Desventajas                                    |
 |-----------------------------------------------|-----------------------------------------------|
@@ -33,6 +33,8 @@ En la tabla inferior se visualizarán cuales son las ventajas y desventajas del 
 
 *Firebase Firestore: Firestore es un servicio de base de datos NoSQL documental ofrecido por Google como parte de Firebase. Es especialmente popular en el desarrollo de aplicaciones móviles y web y se integra bien con otras herramientas de Firebase. Firestore ofrece una sincronización en tiempo real, lo que facilita la construcción de aplicaciones colaborativas y en tiempo real.
 
+En tabla inferior se puede observar la comparación a partir de 5 criterios de los tres motores mencionados anteriormente:modelo de datos, escabilidad, flexibilidad de consulta, popularidad y comunidad, casos de uso destecados.
+
 | Aspecto de Comparación         | MongoDB                         | CouchDB                          | Firebase Firestore                |
 |--------------------------------|---------------------------------|----------------------------------|-----------------------------------|
 | **Modelo de Datos**            | Utiliza el formato BSON y permite estructuras de documentos flexibles con campos anidados. | Utiliza un modelo de datos orientado a documentos con flexibilidad en la estructura. | Utiliza un modelo de datos basado en documentos y admite colecciones y documentos con esquema flexible. |
@@ -41,6 +43,31 @@ En la tabla inferior se visualizarán cuales son las ventajas y desventajas del 
 | **Popularidad y Comunidad**    | Ampliamente utilizado y cuenta con una gran comunidad de usuarios y desarrolladores. | Tiene una comunidad activa, aunque más pequeña en comparación con MongoDB. | Integra Firebase y se beneficia de su comunidad y herramientas adicionales para el desarrollo. |
 | **Casos de Uso Destacados**    | Aplicaciones web y móviles, aplicaciones de alto tráfico, análisis en tiempo real. | Aplicaciones con requisitos de disponibilidad, aplicaciones de seguimiento de cambios, aplicaciones de colaboración. | Aplicaciones móviles y web, aplicaciones en tiempo real, aplicaciones colaborativas y de sincronización. |
 
+### 1.4 Comparación entre tipo de base de datos NoSQL
+En la tabla inferior se visualiza la comparación entre los 3 tipos de bases de datos No SQL
+
+| Ventaja                                                   | Bases de Datos Documentales   | Bases de Datos Clave-Valor     | Bases de Datos de Grafos      |
+|-----------------------------------------------------------|-----------------------------|-----------------------------|-----------------------------|
+| **Flexibilidad en el Modelo de Datos**                     | Ofrecen una estructura flexible de documentos con campos anidados, lo que permite representar datos complejos y semi-estructurados. | Ofrecen una estructura simple con pares de clave-valor, lo que facilita el almacenamiento de datos simples y uniformes. | Utilizan nodos y relaciones para representar datos complejos y las conexiones entre ellos, lo que es ideal para aplicaciones que requieren análisis de redes y relaciones. |
+| **Escalabilidad Horizontal**                               | Son altamente escalables horizontalmente, lo que facilita la gestión de grandes volúmenes de datos distribuidos en múltiples servidores. | También son escalables horizontalmente, pero pueden ser menos eficientes para datos complejos que requieren JOINs. | Ofrecen escalabilidad horizontal, pero su eficiencia puede verse afectada en aplicaciones con relaciones profundas y consultas complejas. |
+| **Rendimiento en Operaciones de Lectura y Escritura**      | Suelen ofrecer un buen rendimiento en operaciones de lectura y escritura debido a la capacidad de indexación y la estructura de documentos. | Ofrecen un rendimiento rápido en operaciones de lectura y escritura debido a su simplicidad y estructura de clave-valor. | El rendimiento varía según la base de datos y la cantidad de relaciones, lo que puede requerir optimizaciones específicas. |
+| **Manejo de Datos Semi-Estructurados y No Estructurados** | Son ideales para datos semi-estructurados o no estructurados, como documentos JSON o XML, lo que facilita el almacenamiento y análisis de datos diversos. | Son adecuados para datos estructurados y simples, pero pueden no ser la mejor opción para datos complejos o no estructurados. | Se adaptan bien a datos con estructuras de grafo, como redes sociales, y pueden representar conexiones de manera eficiente. |
+| **Facilitan el Desarrollo Rápido**                         | La flexibilidad en el esquema y la estructura de datos intuitiva aceleran el desarrollo de aplicaciones, permitiendo a los desarrolladores centrarse en la lógica de la aplicación. | La simplicidad de los modelos de clave-valor puede acelerar el desarrollo, pero puede requerir más trabajo en la lógica de la aplicación para gestionar relaciones. | Pueden requerir un diseño de datos más detallado, lo que puede llevar más tiempo, pero ofrecen un alto rendimiento en análisis de grafos. |
+
+### 1.5 Selección de motor de Base de datos
+En el proyecto "BookSwap", que se centra en el desarrollo de una red social para la compra y venta de libros de segunda mano, la elección del motor de base de datos es una decisión crítica. Después de analizar las necesidades y requerimientos del proyecto, hemos decidido utilizar MongoDB como el motor de base de datos principal. A continuación, se presentan las razones detrás de esta elección:
+
+*Modelo de Datos Flexible: MongoDB se destaca por su capacidad para manejar datos semi-estructurados y no estructurados, lo que encaja perfectamente con la diversidad de información que se encuentra en un proyecto como "BookSwap". Los usuarios pueden agregar descripciones de libros con información variada, y MongoDB permite una representación flexible de estos datos en forma de documentos JSON o BSON.
+
+*Escalabilidad Horizontal: Dado que esperamos un crecimiento constante en la cantidad de usuarios y productos en "BookSwap", la escalabilidad horizontal es esencial. MongoDB es conocido por su capacidad de escalabilidad horizontal, lo que permitirá administrar grandes volúmenes de datos y cargas de trabajo en constante crecimiento de manera eficiente.
+
+*Rendimiento en Operaciones de Lectura y Escritura: Las operaciones de lectura y escritura son fundamentales en una red social, donde los usuarios publican, comentan y realizan compras constantemente. MongoDB ofrece un rendimiento rápido en operaciones de lectura y escritura, lo que garantiza una experiencia de usuario fluida y receptiva.
+
+*Facilidad de Desarrollo: La flexibilidad en el esquema de MongoDB y su estructura de documentos intuitiva facilitan el desarrollo rápido de la aplicación. Los desarrolladores podrán centrarse en la lógica de la aplicación y en brindar una experiencia de usuario sólida sin preocuparse por esquemas rígidos.
+
+*Soporte para Consultas Complejas: MongoDB ofrece una amplia gama de capacidades de consulta, incluida la capacidad de realizar consultas complejas y de indexación personalizada. Esto será útil para permitir a los usuarios buscar libros según criterios específicos, como autor, género, estado del libro o incluso características de las imágenes de los libros.
+
+*Soporte para Imágenes: MongoDB puede gestionar eficazmente el almacenamiento y recuperación de imágenes y otros archivos multimedia asociados con los libros. Esto es crucial para que los usuarios puedan cargar imágenes de los libros que desean vender, lo que enriquece la experiencia de usuario y facilita la venta de libros de segunda mano.
 
 ## 2. Consideraciones Técnicas
 ### 2.1. Configuración de Servicio
