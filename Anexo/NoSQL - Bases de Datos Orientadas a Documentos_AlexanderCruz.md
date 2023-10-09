@@ -55,26 +55,87 @@ En la tabla inferior se visualiza la comparación entre los 3 tipos de bases de 
 | **Facilitan el Desarrollo Rápido**                         | La flexibilidad en el esquema y la estructura de datos intuitiva aceleran el desarrollo de aplicaciones, permitiendo a los desarrolladores centrarse en la lógica de la aplicación. | La simplicidad de los modelos de clave-valor puede acelerar el desarrollo, pero puede requerir más trabajo en la lógica de la aplicación para gestionar relaciones. | Pueden requerir un diseño de datos más detallado, lo que puede llevar más tiempo, pero ofrecen un alto rendimiento en análisis de grafos. |
 
 ### 1.5 Selección de motor de Base de datos
-En el proyecto "BookSwap", que se centra en el desarrollo de una red social para la compra y venta de libros de segunda mano, la elección del motor de base de datos es una decisión crítica. Después de analizar las necesidades y requerimientos del proyecto, hemos decidido utilizar MongoDB como el motor de base de datos principal. A continuación, se presentan las razones detrás de esta elección:
+La elección de MongoDB como el motor de base de datos principal para el proyecto "BookSwap" se basa en una serie de razones técnicas y atributos de calidad que son cruciales para el éxito y rendimiento de la plataforma. A continuación, se detallan estos motivos específicos:
 
-* Modelo de Datos Flexible: MongoDB se destaca por su capacidad para manejar datos semi-estructurados y no estructurados, lo que encaja perfectamente con la diversidad de información que se encuentra en un proyecto como "BookSwap". Los usuarios pueden agregar descripciones de libros con información variada, y MongoDB permite una representación flexible de estos datos en forma de documentos JSON o BSON.
+* Modelo de Datos Flexible: MongoDB se destaca por su capacidad para manejar datos semi-estructurados y no estructurados, lo que encaja perfectamente con la diversidad de información que se encuentra en "BookSwap". En una plataforma donde los usuarios pueden agregar descripciones de libros con información variada, MongoDB permite una representación flexible de estos datos en forma de documentos JSON o BSON. Esto significa que los usuarios pueden incluir detalles diversos sobre los libros, como título, autor, género, estado, precio y más, sin estar limitados por un esquema de base de datos rígido. Esto enriquece la experiencia del usuario y facilita la gestión de datos heterogéneos.
 
-* Escalabilidad Horizontal: Dado que esperamos un crecimiento constante en la cantidad de usuarios y productos en "BookSwap", la escalabilidad horizontal es esencial. MongoDB es conocido por su capacidad de escalabilidad horizontal, lo que permitirá administrar grandes volúmenes de datos y cargas de trabajo en constante crecimiento de manera eficiente.
+* Escalabilidad Horizontal: Dado que anticipamos un crecimiento constante en la cantidad de usuarios y productos en "BookSwap", la escalabilidad horizontal es esencial. MongoDB es conocido por su capacidad de escalabilidad horizontal, lo que permitirá administrar grandes volúmenes de datos y cargas de trabajo en constante crecimiento de manera eficiente. A medida que la plataforma gane popularidad y la base de usuarios aumente, MongoDB nos brinda la flexibilidad de agregar más servidores para distribuir la carga y mantener un alto rendimiento, sin la necesidad de cambios drásticos en la infraestructura.
 
-*Rendimiento en Operaciones de Lectura y Escritura: Las operaciones de lectura y escritura son fundamentales en una red social, donde los usuarios publican, comentan y realizan compras constantemente. MongoDB ofrece un rendimiento rápido en operaciones de lectura y escritura, lo que garantiza una experiencia de usuario fluida y receptiva.
+* Rendimiento en Operaciones de Lectura y Escritura: En una red social como "BookSwap", donde los usuarios realizan operaciones de lectura y escritura constantemente, el rendimiento es un factor crítico para garantizar una experiencia de usuario fluida y receptiva. MongoDB ofrece un rendimiento rápido en operaciones de lectura y escritura gracias a su capacidad de indexación y su estructura de documentos. Los usuarios podrán publicar, comentar y realizar compras sin experimentar demoras significativas, lo que mejora la satisfacción del usuario y fomenta la participación activa en la plataforma.
 
-* Facilidad de Desarrollo: La flexibilidad en el esquema de MongoDB y su estructura de documentos intuitiva facilitan el desarrollo rápido de la aplicación. Los desarrolladores podrán centrarse en la lógica de la aplicación y en brindar una experiencia de usuario sólida sin preocuparse por esquemas rígidos.
+* Facilidad de Desarrollo: La flexibilidad en el esquema de MongoDB y su estructura de documentos intuitiva facilitan el desarrollo rápido de la aplicación. Los desarrolladores podrán centrarse en la lógica de la aplicación y en brindar una experiencia de usuario sólida sin preocuparse por esquemas rígidos. Esto acelera el proceso de desarrollo y permite la implementación ágil de nuevas características y mejoras en respuesta a las necesidades cambiantes de los usuarios.
 
-* Soporte para Consultas Complejas: MongoDB ofrece una amplia gama de capacidades de consulta, incluida la capacidad de realizar consultas complejas y de indexación personalizada. Esto será útil para permitir a los usuarios buscar libros según criterios específicos, como autor, género, estado del libro o incluso características de las imágenes de los libros.
+* Soporte para Consultas Complejas: MongoDB ofrece una amplia gama de capacidades de consulta, incluida la capacidad de realizar consultas complejas y de indexación personalizada. Esto es esencial en una plataforma donde los usuarios desean buscar libros según criterios específicos, como autor, género, estado del libro o incluso características de las imágenes de los libros. MongoDB permite la implementación de funcionalidades de búsqueda avanzada y proporciona a los usuarios la capacidad de encontrar rápidamente los libros que desean.
 
-* Soporte para Imágenes: MongoDB puede gestionar eficazmente el almacenamiento y recuperación de imágenes y otros archivos multimedia asociados con los libros. Esto es crucial para que los usuarios puedan cargar imágenes de los libros que desean vender, lo que enriquece la experiencia de usuario y facilita la venta de libros de segunda mano.
+* Soporte para Imágenes: En "BookSwap", la capacidad de los usuarios para cargar imágenes de los libros que desean vender es fundamental para enriquecer la experiencia de usuario y facilitar la venta de libros de segunda mano. MongoDB puede gestionar eficazmente el almacenamiento y recuperación de imágenes y otros archivos multimedia asociados con los libros. Esto garantiza que los usuarios puedan cargar fotos de alta calidad de los libros que desean vender, lo que aumenta la atractividad de sus publicaciones y mejora la visibilidad de los productos en la plataforma.
 
-## 2. Consideraciones Técnicas
-### 2.1. Configuración de Servicio
-### 2.2. Primeros pasos
-## 3. Demo
-### 3.1. Escenario práctico
-### 3.2. Pasos para la demo
+# 2. Consideraciones Técnicas
+
+## 2.1. Configuración de Servicio
+
+Para el proyecto "BookSwap", hemos decidido utilizar MongoDB como nuestro motor de base de datos en la nube, en este caso, denominado "ArquiSoft". Esta elección nos brinda la flexibilidad y escalabilidad necesarias para administrar grandes volúmenes de datos y proporcionar una experiencia de usuario sólida.
+
+#### Elección del Servicio de MongoDB en la Nube
+
+Hemos optado por utilizar un servicio de MongoDB en la nube para aprovechar las ventajas de la administración de base de datos sin preocuparnos por la infraestructura subyacente. Algunos de los proveedores populares de servicios de MongoDB en la nube incluyen MongoDB Atlas, Amazon DocumentDB y Google Cloud Firestore. En nuestro caso, hemos seleccionado MongoDB Atlas debido a su facilidad de uso, escalabilidad y opciones de seguridad avanzadas.
+
+#### Creación de un Clúster de MongoDB Atlas
+
+El primer paso es crear un clúster de MongoDB Atlas. Esto se puede hacer siguiendo estos pasos:
+
+1. Acceder a la plataforma MongoDB Atlas en [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas).
+
+2. Iniciar sesión o crear una cuenta si aún no la tienes.
+
+3. Crear un nuevo proyecto para "BookSwap" y seleccionar un clúster compartido o dedicado, dependiendo de los requisitos de rendimiento y escalabilidad de la aplicación.
+
+4. Elegir la región de alojamiento para el clúster para garantizar la proximidad a los usuarios y minimizar la latencia.
+
+5. Configurar las opciones de seguridad, como la autenticación y la lista de direcciones IP permitidas, para proteger el acceso a la base de datos.
+
+6. Confirmar la configuración y crear el clúster.
+
+#### Configuración de la Conexión
+
+Una vez que el clúster se haya creado con éxito, debemos configurar la conexión de nuestra aplicación a MongoDB Atlas. Esto implica obtener la cadena de conexión que incluye credenciales de acceso y detalles del clúster. Dicha cadena de conexión se proporciona en el panel de control de MongoDB Atlas y se puede integrar en nuestra aplicación para establecer una conexión segura.
+
+## 2.2. Primeros pasos
+
+Con la configuración del servicio de MongoDB Atlas en marcha, estamos listos para dar los primeros pasos en el desarrollo de "BookSwap". Dado que solo se implementarán las funcionalidades de inicio de sesión (login) y registro, los pasos iniciales se centrarán en estos aspectos:
+
+#### Desarrollo de la Autenticación
+
+Nuestra aplicación requerirá un sistema de autenticación que permita a los usuarios registrarse (crear una cuenta) y luego iniciar sesión. Para esto, utilizaremos la base de datos "ArquiSoft" y su colección "usuario" para almacenar y gestionar la información de los usuarios.
+
+1. Configurar las operaciones de registro y inicio de sesión en la aplicación, utilizando MongoDB para almacenar y recuperar la información de los usuarios.
+
+2. Implementar medidas de seguridad, como el almacenamiento seguro de contraseñas utilizando técnicas de hash y salting.
+
+3. Validar y verificar la autenticidad de los usuarios durante el proceso de inicio de sesión.
+
+4. Desarrollar las páginas de registro e inicio de sesión en la interfaz de usuario de la aplicación, permitiendo a los usuarios crear cuentas y acceder a sus perfiles.
+
+# 3. Demo
+
+## 3.1. Escenario Práctico
+
+En la demostración de MongoDB para el proyecto "BookSwap", nos centraremos en la colección "usuario" de la base de datos "ArquiSoft" para mostrar cómo se realizan las operaciones de inicio de sesión y registro , además se realizara un crud en un archivo de nombre test.js, para mostrar el uso de api y como estas modifican los elementos almacenados en mongoDB.
+
+## 3.2. Pasos para la Demo
+
+Durante la demostración, seguiremos estos pasos:
+
+1. Acceder al panel de control de MongoDB Atlas y mostrar la configuración del clúster en la nube.
+
+2. Mostrar cómo se establece la conexión desde la aplicación de "BookSwap" a la base de datos "ArquiSoft" utilizando la cadena de conexión proporcionada por MongoDB Atlas.
+
+3. Realizar una demostración en vivo de cómo los usuarios pueden registrarse en la aplicación completando un formulario de registro y cómo estos datos se almacenan en la colección "usuario" de la base de datos.
+
+4. Mostrar el proceso de inicio de sesión, donde los usuarios ingresan sus credenciales y la aplicación verifica su autenticidad a través de la colección "usuario".
+
+5. Resaltar las medidas de seguridad implementadas, como el almacenamiento seguro de contraseñas.
+
+Estos pasos de demostración permitirán a los usuarios comprender cómo funciona la autenticación en "BookSwap" y cómo MongoDB se utiliza para gestionar la información de los usuarios en la base de datos "ArquiSoft".
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/1c18cd65-a888-4330-9c43-ff7533b42324)
 
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/4cbe4032-a369-46b0-9d97-f2a65f44e6f9)
