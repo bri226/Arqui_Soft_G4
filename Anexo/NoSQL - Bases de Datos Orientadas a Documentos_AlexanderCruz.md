@@ -69,9 +69,9 @@ La elección de MongoDB como el motor de base de datos principal para el proyect
 
 * Soporte para Imágenes: En "BookSwap", la capacidad de los usuarios para cargar imágenes de los libros que desean vender es fundamental para enriquecer la experiencia de usuario y facilitar la venta de libros de segunda mano. MongoDB puede gestionar eficazmente el almacenamiento y recuperación de imágenes y otros archivos multimedia asociados con los libros. Esto garantiza que los usuarios puedan cargar fotos de alta calidad de los libros que desean vender, lo que aumenta la atractividad de sus publicaciones y mejora la visibilidad de los productos en la plataforma.
 
-# 2. Consideraciones Técnicas
+## 2. Consideraciones Técnicas
 
-## 2.1. Configuración de Servicio
+### 2.1. Configuración de Servicio
 
 Para el proyecto "BookSwap", hemos decidido utilizar MongoDB como nuestro motor de base de datos en la nube, en este caso, denominado "ArquiSoft". Esta elección nos brinda la flexibilidad y escalabilidad necesarias para administrar grandes volúmenes de datos y proporcionar una experiencia de usuario sólida.
 
@@ -99,7 +99,7 @@ El primer paso es crear un clúster de MongoDB Atlas. Esto se puede hacer siguie
 
 Una vez que el clúster se haya creado con éxito, debemos configurar la conexión de nuestra aplicación a MongoDB Atlas. Esto implica obtener la cadena de conexión que incluye credenciales de acceso y detalles del clúster. Dicha cadena de conexión se proporciona en el panel de control de MongoDB Atlas y se puede integrar en nuestra aplicación para establecer una conexión segura.
 
-## 2.2. Primeros pasos
+### 2.2. Primeros pasos
 
 Con la configuración del servicio de MongoDB Atlas en marcha, estamos listos para dar los primeros pasos en el desarrollo de "BookSwap". Dado que solo se implementarán las funcionalidades de inicio de sesión (login) y registro, los pasos iniciales se centrarán en estos aspectos:
 
@@ -115,13 +115,13 @@ Nuestra aplicación requerirá un sistema de autenticación que permita a los us
 
 4. Desarrollar las páginas de registro e inicio de sesión en la interfaz de usuario de la aplicación, permitiendo a los usuarios crear cuentas y acceder a sus perfiles.
 
-# 3. Demo
+## 3. Demo
 
-## 3.1. Escenario Práctico
+### 3.1. Escenario Práctico
 
 En la demostración de MongoDB para el proyecto "BookSwap", nos centraremos en la colección "usuario" de la base de datos "ArquiSoft" para mostrar cómo se realizan las operaciones de inicio de sesión y registro , además se realizara un crud en un archivo de nombre test.js, para mostrar el uso de api y como estas modifican los elementos almacenados en mongoDB.
 
-## 3.2. Pasos para la Demo
+### 3.2. Pasos para la Demo
 
 Durante la demostración, seguiremos estos pasos:
 
