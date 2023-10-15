@@ -46,40 +46,121 @@ El objetivo de este trabajo es proponer una plataforma web para la compra y vent
 
 ### b. Modelo de Negocio
 
-Aquí entra el BM Canvas
+El modelo de negocio se basa en las siguientes características:
+
+#### 1. Segmentos de Clientes
+- <b>Lectores Aficionados</b>: Personas que buscan libros a precios más accesibles y desean contribuir a la economía circular.
+- <b>Vendedores Particulares</b>: Individuos que quieren vender libros usados que ya no necesitan.
+- <b>Pequeñas Librerías Locales</b>: Establecimientos que desean ampliar su alcance vendiendo libros de segunda mano.
+
+#### 2. Propuesta de Valor
+
+- <b>Variedad de Libros Usados</b>: Una amplia gama de libros de segunda mano disponibles.
+- <b>Sistema de Pago Seguro</b>: Con un proceso de pago seguro, los usuarios pueden comprar y vender con confianza, protegiendo la privacidad de sus datos financieros.
+- <b>Economía Circular</b>: Al promover la reutilización, ayudamos a reducir la demanda de nuevos libros y, por ende, el impacto ambiental asociado a su producción.
+- <b>Fomento de la Lectura</b>: Hace que los libros sean más accesibles, fomentando el hábito de la lectura.
+
+#### 3. Canales
+
+- <b>Plataforma Web</b>: La principal interfaz para usuarios.
+- <b>Correo Electrónico</b>: Confirmación de registros, notificaciones de transacciones y actualizaciones.
+- <b>Redes Sociales</b>: Promoción, publicidad y participación de la comunidad.
+
+#### 4. Relaciones con los clientes
+
+- <b>Atención al Cliente</b>: Soporte a través de correo electrónico.
+- <b>Comunidad en Línea (**)</b>: Foros, reseñas y espacio para que los usuarios compartan sus experiencias.
+
+#### 5. Fuentes de ingresos
+
+- <b>Comisión por Transacción</b>: Pequeña tarifa por cada venta realizada a través de la plataforma.
+- <b>Publicidad Premium (**)</b>: Oportunidades para destacar ciertos libros o vendedores mediante publicidad pagada.
+
+#### 6. Recursos clave
+
+- <b>Plataforma Web</b>: Desarrollo y mantenimiento continuo.
+- <b>Base de Datos de Libros</b>: Actualizada y diversa.
+- <b>Sistema de Pago Seguro</b>: Integración con pasarelas de pago confiables.
+
+#### 7. Actividades clave
+
+- <b>Curación de Contenido</b>: Garantizar la calidad y autenticidad de los libros en la plataforma.
+- <b>Desarrollo y Mejora Continua de la Plataforma</b>: Para adaptarse a las necesidades cambiantes de los usuarios.
+
+#### 8. Socios clave
+
+- <b>Servicios de Pago</b>: Colaboración con proveedores de servicios de pago seguros.
+- <b>Empresas de Logística</b>: Acuerdos para el envío eficiente y seguimiento de pedidos.
+- <b>Proveedores Frecuentes de Libros de Segunda Mano</b>: Para mantener un flujo constante de nuevos libros en la plataforma.
+
+#### 9. Estructura de costos
+
+- <b>Desarrollo y Mantenimiento de la Plataforma</b>: Incluyendo actualizaciones y mejoras.
+- <b>Gastos de Marketing</b>: Publicidad en línea y promoción para atraer nuevos usuarios.
+- <b>Costos de Transacción</b>: Relacionados con el procesamiento seguro de pagos.
+
+![business_model_canvas](img/business_model_canvas.png)
 
 ### c. Estructura del equipo
 
-Estructura del equipo en total de la "empresa" (desde el CEO hasta Soporte Cliente), sin nombres de personas, solo un esquema del potencial esquema conceptual.
+En la siguiente sección, se delinearán los elementos fundamentales de la estructura organizativa del equipo dedicado a la venta de libros de segunda mano. 
+
+#### CEO
+Se encuentra en el primer nivel y es el encargado de establecer la visión y estrategia general de la empresa. También se encarga de tomar decisiones estratégicas, elegir las tácticas y representar a la empresa ante socios clave y eventos importantes.
+
+#### COO
+El Director de Operaciones supervisa las operaciones diarias y garantiza la eficiencia, gestiona la logística y el cumplimiento de pedidos, además de que, al ser parte de la dirección ejecutiva, colabora en la toma de decisiones estratégicas.
+
+#### CTO
+El Director de Tecnología es un rol clave. Supervisa el desarrollo y mantenimiento de la plataforma web, garantiza que la plataforma sea segura tanto para compradores como vendedores, y al ser parte de la dirección ejecutiva, también colabora en la toma de decisiones estratégicas.
+
+#### EQUIPOS FUNCIONALES
+Los equipos funcionales se centran en tareas y actividades especializadas directamente relacionadas con la misión principal de la empresa.
+
+| Equipo | Descripción |
+| -----------|----------|
+| Desarrollo | Desarrollar  y mantener la plataforma web. Implementar nuevas características y mejoras |
+| Operaciones y Logística | Gestionar la logística y envío de libros. Coordinar con empresas de logística y proveedores. |
+| Marketing | Desarrollar estrategias de marketing y publicidad. Gestionar campañas en redes sociales. |
+| Contenido y Curación | Verificar la autenticidad y calidad de los libros. Desarrollar descripciones detalladas para los libros. Mantener calidad del catálogo |
+
+#### EQUIPOS DE SOPORTE
+Los equipos de soporte brindan servicios que respaldan las funciones principales de la organización, sin estar directamente relacionados en el servicio principal.
+| Equipo | Descripción |
+| -----------|----------|
+| Atención al Cliente | Responder a consultas de usuarios. Gestionar problemas y solicitudes. |
+| Comunidad * | Fomentar la participación en la comunidad. Gestionar foros y contenido generado por usuarios. |
+
+#### FINANZAS Y ADMINISTRACIÓN
+Este equipo se centra en la gestión financiera y administrativa de la empresa. Está encargado de la planificación financiera, la contabilidad, la gestión de recursos humanos y otras funciones administrativas cruciales para el buen funcionamiento de la organización.
+| Equipo | Descripción |
+| -----------|----------|
+| CFO | Supervisar salud financiera de la empresa. Gestionar presupuestos. Colabora en decisiones estratégicas. |
+| Equipo Administrativo | Gestionar tareas administrativas y recursos humanos. Cumplir con requisitos legales. |
+
+
+![organigrama](img/organigrama.jpg)
+
 
 ### d. Listado de Stakeholders
 Los stakeholders seleccionados para este trabajo son:
 |Stakeholder|Funciones|
 |-------------|-----------|
-| Usuario | |
-|Jefe de proyecto| | 
-| Administrador de Base de Datos| |
-|Diseñador | |
-|Implementador| |
-|Especialista en Despliegue| |
-|Responsable de pruebas | | 
-|Responsable de Mantenimiento| |
-|Ingeniero de sistemas| |
+| Usuario | Representa a los posibles compradores y vendedores de libros en la plataforma. Contribuye con la definición de requisitos, proporciona retroalimentación sobre la usabilidad y la experiencia del usuario, y ayuda a dar forma a las características que satisfacen sus necesidades en la compra y venta de libros de segunda mano.|
+|Jefe de proyecto| Dirige la planificación y ejecución del proyecto de la plataforma de venta de libros usados. Gestiona el equipo de desarrollo, asegura que se cumplan los plazos, y supervisa la implementación de características centradas en la experiencia del usuario y la eficiencia operativa. | 
+| Administrador de Base de Datos| Diseña y gestiona la estructura de la base de datos que almacena la información sobre los libros y los usuarios. Garantiza la integridad y seguridad de los datos, así como la eficiencia en la recuperación de la información.|
+|Diseñador | Trabaja en la interfaz de usuario de la plataforma. Diseña una experiencia atractiva y fácil de usar que fomente la navegación fluida, la presentación clara de los libros y la participación activa de los usuarios. |
+|Implementador| Transforma los diseños y requisitos en código funcional para la plataforma. Desarrolla las características que permitirán la compra y venta de libros de manera efectiva y segura. |
+|Especialista en Despliegue| Gestiona la implementación de la plataforma en entornos de producción. Se asegura de que el despliegue sea exitoso y que la plataforma esté disponible para los usuarios finales. |
+|Responsable de pruebas | Diseña y ejecuta pruebas para identificar posibles problemas en la plataforma. Colabora con los desarrolladores para corregir errores, garantizando que la plataforma sea robusta y segura para los usuarios.| 
+|Responsable de Mantenimiento| Supervisa las actualizaciones y mejoras continuas de la plataforma después de su lanzamiento. Aborda problemas en curso y trabaja para optimizar la plataforma a medida que evolucionan las necesidades y tecnologías. |
+|Ingeniero de sistemas| Colabora en el diseño y la arquitectura de la plataforma. Asegura que la infraestructura técnica sea escalable y cumpla con los estándares de seguridad, contribuyendo a la viabilidad y robustez del sistema. |
 
 ## 2. Requerimientos
-Historias de usuario, relacionadas con mockups.
-### 2.1. Usuario
 
-### 2.2. Catálogo de libros
+### 2.1. Requerimiento funcionales
 
-### 2.3. Sistema de pagos
-
-### 2.4. Envío y logísticas
-
-
-## 3. Requerimientos funcionales
-
-### 3.1. Usuario (Alex)
+#### 2.1.1. Usuario (Alex)
 (RFU-01) Registro de Usuarios: Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
 
 (RFU-02) Correo de confirmación: Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
@@ -94,7 +175,7 @@ Historias de usuario, relacionadas con mockups.
 
 (RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
-### 3.2. Catálogo de libros (Bri)
+#### 2.1.2. Catálogo de libros (Bri)
 
 (RFCL-01) Búsqueda de Libros: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
 
@@ -102,7 +183,7 @@ Historias de usuario, relacionadas con mockups.
 
 (RFCL-03) Detalles del libro: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
 
-### 3.3. Sistema de pagos (Daniel)
+#### 2.1.3. Sistema de pagos (Daniel)
 
 (RFSP-01) Procesamiento de Pagos: El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
 
@@ -110,13 +191,13 @@ Historias de usuario, relacionadas con mockups.
 
 (RFSP-03) Confirmación de Pagos: Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
 
-### 3.4. Envío y logísticas (Micali)
+#### 2.1.4. Envío y logísticas (Micali)
 
 (RFEL-01) Cálculo de Costos de Envío: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
 
 (RFEL-02) Seguimiento de Envíos: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
 
- (RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
+(RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
 
 (RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
