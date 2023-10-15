@@ -32,10 +32,17 @@
 
 
 
-## 1. Caso de Negocio
+## 1. Bookswap
 
 ### a. Generalidades
-Es una plataforma en línea que conecta a entusiastas de la lectura que desean comprar y vender libros de segunda mano. La plataforma está diseñada para brindar a los usuarios una experiencia fácil y conveniente para intercambiar libros usados, fomentando la reutilización y el reciclaje de libros y promoviendo la comunidad lectora.
+El libro es un bien cultural que ha acompañado a la humanidad durante siglos. En Perú, el libro es un producto de consumo masivo, con un mercado de más de 10 millones de lectores. Sin embargo, existe un vacío en el mercado para la compra y venta de libros de segunda mano. La venta de libros en el Perú ha aumentado a pesar de la pandemia del COVID-19 y el aislamiento social, según Desafíos PWC (2022), el mercado ha crecido un 8% interanual para el año 2020, y 4.9% para el 2021, además de que seamos el segundo país en América Latina con mayor crecimiento en compra de libros impresos.
+
+La feria de libros en el Jirón Amazonas ofrece una experiencia única para los lectores que buscan libros usados. Sin embargo, la falta de una plataforma online centralizada para comprar y vender libros usados limita las posibilidades de compra y venta de este tipo de libros.
+
+Existen, no obstante, plataformas web que realizan la tarea de interconectar a vendedores de libros de segunda mano (que en realidad puede ser cualquier persona que quiera ofrecer un libro que ya no va a usar más). Buscalibre es una librería online con sede en Chile cuya especialidad es la venta de libros, tanto usados como nuevos, a un precio variado y con un costo de envío bajo, aunque sean libros importados desde Europa o cualquier país de Latinoamérica. Sin embargo, la funcionalidad de compra de libros usados no está muy desarrollada, ya que los precios son colocados por la plataforma de acuerdo con el ISBN de cada libro (Buscalibre, s.f.), por lo tanto, si son muy altos y no van de acuerdo con el valor real del libro, no se venden. Relibrea es una plataforma web que conecta a vendedores y compradores de libros de segunda mano, sin embargo, solo es un punto de encuentro entre ambas partes, las negociaciones son definidas por los usuarios, y no tiene mayor funcionalidad especial.
+
+El objetivo de este trabajo es proponer una plataforma web para la compra y venta de libros de segunda mano en Perú. La plataforma facilitará la compra y venta de libros de segunda mano, ya que los usuarios encontrarán los libros que buscan de forma rápida y sencilla, y que ofrecería un sistema de pago seguro y confiable. Adempas, contribuiría a la economía circular. La venta de libros de segunda mano ayuda a reducir el impacto ambiental de la industria editorial, ya que evita la producción de libros nuevos. Finalmente, fomentaría la cultura de la lectura. Al hacer que los libros sean más accesibles, la plataforma podría ayudar a fomentar el hábito de la lectura entre los peruanos.El ob
+
 
 ### b. Modelo de Negocio
 
@@ -112,3 +119,15 @@ Historias de usuario, relacionadas con mockups.
  (RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
 
 (RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
+
+
+
+
+
+
+
+
+### REFERENCIAS
+Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
+
+Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
