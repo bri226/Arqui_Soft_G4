@@ -129,7 +129,7 @@ Los equipos de soporte brindan servicios que respaldan las funciones principales
 | Equipo | Descripción |
 | -----------|----------|
 | Atención al Cliente | Responder a consultas de usuarios. Gestionar problemas y solicitudes. |
-| Comunidad * | Fomentar la participación en la comunidad. Gestionar foros y contenido generado por usuarios. |
+| Comunidad ** | Fomentar la participación en la comunidad. Gestionar foros y contenido generado por usuarios. |
 
 #### FINANZAS Y ADMINISTRACIÓN
 Este equipo se centra en la gestión financiera y administrativa de la empresa. Está encargado de la planificación financiera, la contabilidad, la gestión de recursos humanos y otras funciones administrativas cruciales para el buen funcionamiento de la organización.
@@ -138,8 +138,8 @@ Este equipo se centra en la gestión financiera y administrativa de la empresa. 
 | CFO | Supervisar salud financiera de la empresa. Gestionar presupuestos. Colabora en decisiones estratégicas. |
 | Equipo Administrativo | Gestionar tareas administrativas y recursos humanos. Cumplir con requisitos legales. |
 
+<img src="img/organigrama.jpg" width="70%"/>
 
-![organigrama](img/organigrama.jpg)
 
 
 ### d. Listado de Stakeholders
@@ -161,50 +161,51 @@ Los stakeholders seleccionados para este trabajo son:
 ### 2.1. Requerimiento funcionales
 
 #### 2.1.1. Usuario (Alex)
-(RFU-01) Registro de Usuarios: Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
 
-(RFU-02) Correo de confirmación: Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
 
-(RFU-03) Inicio de Sesión: Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
+- <b> Registro de Usuarios</b>: Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
+- <b>Correo de confirmación</b>: Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
+- <b>Inicio de Sesión</b>: Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
+- <b>Inicio Erróneo</b>: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
+- <b>Gestión de Perfil</b>: Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
+- <b>Gestion de Historial</b>: Los usuarios pueden ver y editar su historial de intercambio de libros.
+- <b>Mensajeria con usuarios</b>: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
-(RFU-03.1) Inicio Erróneo: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
-
- (RFU-04) Gestión de Perfil : Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
-
-(RFU-05) Gestion de Historial: Los usuarios pueden ver y editar su historial de intercambio de libros.
-
-(RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
 #### 2.1.2. Catálogo de libros (Bri)
 
-(RFCL-01) Búsqueda de Libros: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
-
-(RFCL-02) Exploración de Categorías: Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
-
-(RFCL-03) Detalles del libro: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
+- <b>Búsqueda de Libros</b>: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
+- <b>Exploración de Categorías</b>: Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
+- <b>Detalles del libro</b>: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
 
 #### 2.1.3. Sistema de pagos (Daniel)
 
-(RFSP-01) Procesamiento de Pagos: El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
-
-(RFSP-02) Gestión de Métodos de Pago o Cobro: Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias.
-
-(RFSP-03) Confirmación de Pagos: Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
+- <b>Procesamiento de Pagos</b>: El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
+- <b>Gestión de Métodos de Pago o Cobro</b>: Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias.
+- <b>Confirmación de Pagos</b>: Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
 
 #### 2.1.4. Envío y logísticas (Micali)
 
-(RFEL-01) Cálculo de Costos de Envío: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
+- <b>Cálculo de Costos de Envío</b>: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
+- <b>Seguimiento de Envíos</b>: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
+- <b>Opciones de Envío</b>: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
+- <b>Gestión de Devoluciones</b>: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
-(RFEL-02) Seguimiento de Envíos: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
-
-(RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
-
-(RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
-
+<img src="img/modulos.jpg" width="60%"/>
 
 
+### 2.2. Requerimiento de atributos de calidad (Escenarios)
 
 
+
+### 2.2. Restricciones
+
+
+## 3. Decisiones a nivel de arquitectura
+
+
+
+## 4. Tácticas
 
 
 
