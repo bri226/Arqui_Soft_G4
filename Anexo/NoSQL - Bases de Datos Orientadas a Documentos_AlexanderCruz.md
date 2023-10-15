@@ -158,12 +158,12 @@ Se concluye que MongoDB ha demostrado ser una opción eficaz para el desarrollo 
 Además, se logró implementar las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) utilizando MongoDB de manera sencilla y eficiente. Esto ha destacado la rapidez y eficacia de esta herramienta en el contexto de la aplicación. A continuación, se adjuntarán capturas de pantalla que ilustran los resultados obtenidos. Para una experiencia interactiva, se proporcionará el enlace a la demostración en línea.
 * Captura del Frontend
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/a371862a-c105-4138-8f2d-bfc927c0c712)
-* Caputa del Backend
+* Captura del Backend
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/9d9d37d9-94fc-4ea9-891f-ce48c557cb4d)
-* Caputa del Login Demo
+* Captura del Login Demo
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/1f86c89e-b2af-4a7e-a901-da1dab4335f8)
 
-* Caputa del Registro Demo
+* Captura del Registro Demo
   ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/c961e573-144c-4568-8ebc-eec43eb26351)
 
 * CRUD DEMO
@@ -175,5 +175,6 @@ Además, se logró implementar las operaciones CRUD (Crear, Leer, Actualizar y E
 ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/e4c4453d-7b61-4047-9be7-2e6643b6ab9a)
 
 * LINK DE LA DEMO:https://drive.google.com/file/d/1ASpGqq1UMthVEQQy_qJ_7jjqARVX6u4j/view?usp=sharing
+
 ## 4. Referencias
 Del Busto, I. H. G. (2012). BASES DE DATOS NoSQL. https://revistatelematica.cujae.edu.cu/index.php/tele/article/view/74
