@@ -234,6 +234,18 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 | ESC-09     | RFU-03, RFU-05, RFU-06, RFU-07         |
 | ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
+## 4. TÁCTICAS
+
+### 4.1 Disponibilidad
+Asegurar una alta disponibilidad es esencial en la plataforma para garantizar que los usuarios puedan acceder a la aplicación y realizar transacciones de compra y venta en cualquier momento. Por lo que se implementará un sistema de monitereo para aplicaciones que permita detectar y prevenir fallas.
+
+#### Medida de respuesta esperado 
+- Disponibilidad del sistema: 99.9%
+- Downtime / Año: 8.8h
+### 4.2 Mantenibilidad
+### 4.3 Interoperabilidad
+### 4.4 Rendimiento
+### 4.5 Seguridad
 
 
 
