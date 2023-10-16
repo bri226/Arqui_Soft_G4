@@ -203,8 +203,8 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
-###2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
-###2.3 Requerimientos de Atributos de Calidad (Escenarios)
+### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
+### 2.3 Requerimientos de Atributos de Calidad (Escenarios)
 A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
 
 |Atributo|Código|Entorno|Fuente|Estímulo|Artefacto|Resouesta|Medida de Respuesta
