@@ -169,13 +169,15 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFU-03.1) Inicio Erróneo: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
 
- (RFU-04) Gestión de Perfil : Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
+(RFU-04) Gestión de Perfil : Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
 
 (RFU-05) Gestion de Historial: Los usuarios pueden ver y editar su historial de intercambio de libros.
 
 (RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
 (RFU-07) Red Social para intercambio de libros: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
+
+(RFU-08) Publicar libros en venta: Los usuarios pueden subir la información de los libros que quieren vender.
 
 #### 2.1.2. Catálogo de libros (Bri)
 
@@ -223,7 +225,7 @@ A continuación, se presenta una tabla que resume los atributos de calidad, sus 
 En la siguiente tabla se especifican a qué requerimientos funcionales estan relacionados los escenarios descritos.
 | Escenarios | Requerimiento Funcional Relacionado |
 |------------|--------------------------------------|
-| ESC-01     | RFU-06                               |
+| ESC-01     | RFU-06, RFU-08                              |
 | ESC-02     | RFU-01, RFU-03                        |
 | ESC-03     | RFU-02, RFU-03, RFU-03.1              |
 | ESC-04     | RFU-04                               |
@@ -234,11 +236,35 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 | ESC-09     | RFU-03, RFU-05, RFU-06, RFU-07         |
 | ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
+### 2.4 Restricciones
+**Tecnologías Utilizadas:**
 
+- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
+  
+- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
 
+- **Bases de Datos:**
+  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
+  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
+  
+- **Servidores y Despliegue:**
+  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
+  
+- **Seguridad:**
+  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
+  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
+  
 
-
-### REFERENCIAS
+  
+## 3. Decisiones a Nivel de Arquitectura
+### 3.1. Asignaciones de Responsibilidades
+### 3.2. Modelos de Coordinación
+### 3.3. Modelos de datos
+### 3.4. Mapeo entre Elementos de Arquitectura
+### 3.5. Elección de Tecnología
+## 4. Tácticas
+## 5. Anexo: Tópicos en Arquitectura de Software
+## 6. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
 Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
