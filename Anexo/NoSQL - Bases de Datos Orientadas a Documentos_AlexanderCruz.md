@@ -119,7 +119,7 @@ Nuestra aplicación requerirá un sistema de autenticación que permita a los us
 
 ### 3.1. Escenario Práctico
 
-En la demostración de MongoDB para el proyecto "BookSwap", nos centraremos en la colección "usuario" de la base de datos "ArquiSoft" para mostrar cómo se realizan las operaciones de inicio de sesión y registro , además se realizara un crud en un archivo de nombre test.js, para mostrar el uso de api y como estas modifican los elementos almacenados en mongoDB.
+En la demostración de MongoDB para el proyecto "BookSwap", nos centraremos en la colección "usuario" de la base de datos "ArquiSoft" para mostrar cómo se realizan las operaciones de inicio de sesión y registro , además se realizara un crud en un archivo de nombre test.js, para mostrar el uso de api y como estas modifican los elementos almacenados en mongoDB. Además se implementó un gestor de imagenes , donde los usuarios van a poder subir sus fotos de perfil y actualizarlas en cualquier momento.
 
 ### 3.2. Pasos para la Demo
 
@@ -154,6 +154,27 @@ Estos pasos de demostración permitirán a los usuarios comprender cómo funcion
 
 
 ### 3.3. Resultados
+Se concluye que MongoDB ha demostrado ser una opción eficaz para el desarrollo de esta aplicación. El manejo de imágenes almacenadas en MongoDB resultó óptimo gracias al uso de la librería Multer, que facilita el almacenamiento de imágenes en la carpeta "uploads". Sin embargo, para futuras versiones, se sugiere considerar el almacenamiento de imágenes en un servicio como Amazon S3 para una mayor escalabilidad y confiabilidad.
+Además, se logró implementar las operaciones CRUD (Crear, Leer, Actualizar y Eliminar) utilizando MongoDB de manera sencilla y eficiente. Esto ha destacado la rapidez y eficacia de esta herramienta en el contexto de la aplicación. A continuación, se adjuntarán capturas de pantalla que ilustran los resultados obtenidos. Para una experiencia interactiva, se proporcionará el enlace a la demostración en línea.
+* Captura del Frontend
+![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/a371862a-c105-4138-8f2d-bfc927c0c712)
+* Captura del Backend
+![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/9d9d37d9-94fc-4ea9-891f-ce48c557cb4d)
+* Captura del Login Demo
+![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/1f86c89e-b2af-4a7e-a901-da1dab4335f8)
+
+* Captura del Registro Demo
+  ![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/c961e573-144c-4568-8ebc-eec43eb26351)
+
+* CRUD DEMO
+
+![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/695128cb-9fa5-4fa0-be89-a86995caada1)
+
+* Pagina para subir imagenes
+
+![image](https://github.com/bri226/Arqui_Soft_G4/assets/98053517/e4c4453d-7b61-4047-9be7-2e6643b6ab9a)
+
+* LINK DE LA DEMO:https://drive.google.com/file/d/1ASpGqq1UMthVEQQy_qJ_7jjqARVX6u4j/view?usp=sharing
 
 ## 4. Referencias
 Del Busto, I. H. G. (2012). BASES DE DATOS NoSQL. https://revistatelematica.cujae.edu.cu/index.php/tele/article/view/74

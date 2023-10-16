@@ -170,6 +170,7 @@ Los stakeholders seleccionados para este trabajo son:
 - <b>Gestión de Perfil</b>: Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
 - <b>Gestion de Historial</b>: Los usuarios pueden ver y editar su historial de intercambio de libros.
 - <b>Mensajeria con usuarios</b>: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
+- <b> Red Social para intercambio de libros</b>: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
  - <b> Publicar libros en venta </b>: Los usuarios pueden subir la información de los libros que quieren vender.
 
 #### 2.1.2. Catálogo de libros (Bri)
@@ -197,20 +198,66 @@ Los stakeholders seleccionados para este trabajo son:
 
 ### 2.2. Requerimiento de atributos de calidad (Escenarios)
 
+### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
+### 2.3 Requerimientos de Atributos de Calidad (Escenarios)
+A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
 
+|Atributo|Código|Entorno|Fuente|Estímulo|Artefacto|Resouesta|Medida de Respuesta
+|-------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+|Escalabilidad|ESC-01|Red Social|Usuario|Miles de publicaciones en un periodo corto | Infraestrucutra de servidores|Activación de servidores extras|El servidor se activa de 30 segundos
+| Escalabilidad | ESC-02 | Plataforma de Bookswap | Usuario | Aumento rápido de usuarios y transacciones | Infraestructura del servidor | Escalamiento automático de recursos computacionales | El tiempo de respuesta se mantiene constante incluso con el aumento del tráfico. |
+| Disponibilidad | ESC-03 | Base de Datos | Usuario | Fallo del servidor principal | Base de datos replicada | Conmutación por error a la réplica de la base de datos | La plataforma sigue funcionando sin interrupciones. |
+| Usabilidad | ESC-04 | Interfaz de Usuario | Usuario | Interacción del usuario con la interfaz | Interfaz de usuario | Respuestas intuitivas y guías visuales | La tasa de abandono durante el registro y la búsqueda se reduce en un 20%. |
+| Seguridad | ESC-05 | Procesos de Autenticación | Usuario | Intento de inicio de sesión no autorizado | Sistema de autenticación | Bloqueo temporal de la cuenta y notificación al usuario | La cuenta del usuario está segura y el acceso no autorizado se detiene. |
+| Eficiencia | ESC-06 | Sistema de Pago | Usuario | Procesamiento de transacciones | Módulo de pago | Procesamiento rápido y sin errores de las transacciones | El tiempo de procesamiento de las transacciones se reduce en un 30%. |
+| Confidencialidad | ESC-07 | Base de Datos | Usuario | Intento de acceso no autorizado a datos de usuario | Sistema de control de acceso | Denegación de acceso y registro del intento | La información del usuario se mantiene confidencial y segura. |
+| Integridad | ESC-08| Base de Datos | Usuario | Intento de modificación no autorizada de datos | Sistema de gestión de bases de datos | Rechazo de la modificación y notificación al administrador | Los datos del usuario se mantienen intactos y sin alteraciones no autorizadas. |
+| Mantenibilidad | ESC-09 | Código Fuente | Desarrollador | Identificación de errores en el código | Herramientas de depuración | Registro y notificación de errores | Los errores son corregidos en un plazo de 24 horas desde la detección. |
+| Portabilidad | ESC-10 | Plataforma de Despliegue | Administrador | Cambio de proveedor de servicios en la nube | Configuración del servidor | Migración sin pérdida de datos y funcionalidades | La plataforma está completamente funcional en el nuevo proveedor en un plazo de 48 horas. |
 
-### 2.2. Restricciones
+En la siguiente tabla se especifican a qué requerimientos funcionales estan relacionados los escenarios descritos.
+| Escenarios | Requerimiento Funcional Relacionado |
+|------------|--------------------------------------|
+| ESC-01     | RFU-06, RFU-08                              |
+| ESC-02     | RFU-01, RFU-03                        |
+| ESC-03     | RFU-02, RFU-03, RFU-03.1              |
+| ESC-04     | RFU-04                               |
+| ESC-05     | RFU-03, RFU-03.1                      |
+| ESC-06     | RFSP-01, RFSP-03                      |
+| ESC-07     | RFCL-01, RFCL-02, RFCL-03              |
+| ESC-08     | RFU-04                               |
+| ESC-09     | RFU-03, RFU-05, RFU-06, RFU-07         |
+| ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
+### 2.4 Restricciones
+**Tecnologías Utilizadas:**
 
-## 3. Decisiones a nivel de arquitectura
+- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
+  
+- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
 
+- **Bases de Datos:**
+  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
+  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
+  
+- **Servidores y Despliegue:**
+  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
+  
+- **Seguridad:**
+  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
+  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
+  
 
-
+  
+## 3. Decisiones a Nivel de Arquitectura
+### 3.1. Asignaciones de Responsibilidades
+### 3.2. Modelos de Coordinación
+### 3.3. Modelos de datos
+### 3.4. Mapeo entre Elementos de Arquitectura
+### 3.5. Elección de Tecnología
 ## 4. Tácticas
-
-
-
-### REFERENCIAS
+## 5. Anexo: Tópicos en Arquitectura de Software
+## 6. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
 Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
