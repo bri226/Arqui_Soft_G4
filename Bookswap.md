@@ -169,13 +169,15 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFU-03.1) Inicio Erróneo: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
 
- (RFU-04) Gestión de Perfil : Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
+(RFU-04) Gestión de Perfil : Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
 
 (RFU-05) Gestion de Historial: Los usuarios pueden ver y editar su historial de intercambio de libros.
 
 (RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
 (RFU-07) Red Social para intercambio de libros: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
+
+(RFU-08) Publicar libros en venta: Los usuarios pueden subir la información de los libros que quieren vender.
 
 #### 2.1.2. Catálogo de libros (Bri)
 
