@@ -175,6 +175,8 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
+(RFU-07) Red Social: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
+
 #### 2.1.2. Catálogo de libros (Bri)
 
 (RFCL-01) Búsqueda de Libros: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
@@ -201,8 +203,24 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
+###2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
+###2.3 Requerimientos de Atributos de Calidad (Escenarios)
+A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
 
-
+|Atributo|Código|Entorno|Fuente|Estímulo|Artefacto|Resouesta|Medida de Respuesta
+|-------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+|Escalabilidad|ESC-01|Red Social|Usuario|Miles de publicaciones en un periodo corto | Infraestrucutra de servidores|Activación de servidores extras|El servidor se activa de 30 segundos
+| Atributo | Código | Entorno | Fuente | Estímulo | Artefacto | Respuesta | Medida de Respuesta |
+|----------|--------|----------|--------|----------|-----------|-----------|---------------------|
+| Escalabilidad | ESC-01 | Plataforma de Bookswap | Usuario | Aumento rápido de usuarios y transacciones | Infraestructura del servidor | Escalamiento automático de recursos computacionales | El tiempo de respuesta se mantiene constante incluso con el aumento del tráfico. |
+| Disponibilidad | ESC-01 | Base de Datos | Usuario | Fallo del servidor principal | Base de datos replicada | Conmutación por error a la réplica de la base de datos | La plataforma sigue funcionando sin interrupciones. |
+| Usabilidad | ESC-02 | Interfaz de Usuario | Usuario | Interacción del usuario con la interfaz | Interfaz de usuario | Respuestas intuitivas y guías visuales | La tasa de abandono durante el registro y la búsqueda se reduce en un 20%. |
+| Seguridad | ESC-03 | Procesos de Autenticación | Usuario | Intento de inicio de sesión no autorizado | Sistema de autenticación | Bloqueo temporal de la cuenta y notificación al usuario | La cuenta del usuario está segura y el acceso no autorizado se detiene. |
+| Eficiencia | ESC-04 | Sistema de Pago | Usuario | Procesamiento de transacciones | Módulo de pago | Procesamiento rápido y sin errores de las transacciones | El tiempo de procesamiento de las transacciones se reduce en un 30%. |
+| Confidencialidad | ESC-05 | Base de Datos | Usuario | Intento de acceso no autorizado a datos de usuario | Sistema de control de acceso | Denegación de acceso y registro del intento | La información del usuario se mantiene confidencial y segura. |
+| Integridad | ESC-06| Base de Datos | Usuario | Intento de modificación no autorizada de datos | Sistema de gestión de bases de datos | Rechazo de la modificación y notificación al administrador | Los datos del usuario se mantienen intactos y sin alteraciones no autorizadas. |
+| Mantenibilidad | ESC-06 | Código Fuente | Desarrollador | Identificación de errores en el código | Herramientas de depuración | Registro y notificación de errores | Los errores son corregidos en un plazo de 24 horas desde la detección. |
+| Portabilidad | ESC-07 | Plataforma de Despliegue | Administrador | Cambio de proveedor de servicios en la nube | Configuración del servidor | Migración sin pérdida de datos y funcionalidades | La plataforma está completamente funcional en el nuevo proveedor en un plazo de 48 horas. |
 
 
 
