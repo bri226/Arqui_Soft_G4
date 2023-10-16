@@ -170,13 +170,14 @@ Los stakeholders seleccionados para este trabajo son:
 - <b>Gestión de Perfil</b>: Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
 - <b>Gestion de Historial</b>: Los usuarios pueden ver y editar su historial de intercambio de libros.
 - <b>Mensajeria con usuarios</b>: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
-
+ - <b> Publicar libros en venta </b>: Los usuarios pueden subir la información de los libros que quieren vender.
 
 #### 2.1.2. Catálogo de libros (Bri)
 
 - <b>Búsqueda de Libros</b>: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
 - <b>Exploración de Categorías</b>: Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
 - <b>Detalles del libro</b>: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
+- <b>Lista de libros deseados</b>: Los usuarios deben poder agregar libros a su lista de deseos.
 
 #### 2.1.3. Sistema de pagos (Daniel)
 
