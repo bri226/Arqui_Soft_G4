@@ -238,17 +238,18 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 
 ### 2.4 Restricciones
 * Tecnologías Utilizadas:
-** Frontend: Utilizaremos React para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
-Backend: Implementaremos el backend utilizando Node.js y Express.js para la construcción de APIs robustas y eficientes.
-Bases de Datos:
-Base de Datos Relacional: Emplearemos PostgreSQL como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
-Base de Datos No Relacional: Utilizaremos MongoDB como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
-Servidores y Despliegue:
+**Frontend:** Utilizaremos React para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
+**Backend:** Implementaremos el backend utilizando Node.js y Express.js para la construcción de APIs robustas y eficientes.
+* Bases de Datos:
+**Base de Datos Relacional:** Emplearemos PostgreSQL como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
+**Base de Datos No Relacional:** Utilizaremos MongoDB como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
+* Servidores y Despliegue:
 Desplegaremos nuestras aplicaciones en servidores propios utilizando servicios de Amazon Web Services (AWS), Heroku y pruebas gratuitas de Atlas para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
-Seguridad:
-Token de Seguridad: Implementaremos tokens de seguridad para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
-Contraseñas Encriptadas: Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma encriptada para mantener la seguridad y la privacidad de los datos.
-Políticas de Seguridad Rigurosas: Estableceremos una política de seguridad rigurosa que incluirá medidas como la autenticación de dos factores y el cifrado de datos tanto en reposo como en tránsito para garantizar la protección completa de los datos del usuario y la integridad del sistema.
+* Seguridad:
+**Token de Seguridad:** Implementaremos tokens de seguridad para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
+**Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma encriptada para mantener la seguridad y la privacidad de los datos.
+**Políticas de Seguridad Rigurosas:** Estableceremos una política de seguridad rigurosa que incluirá medidas como la autenticación de dos factores y el cifrado de datos tanto en reposo como en tránsito para garantizar la protección completa de los datos del usuario y la integridad del sistema.
+  
 ## 3. Decisiones a Nivel de Arquitectura
 ### 3.1. Asignaciones de Responsibilidades
 ### 3.2. Modelos de Coordinación
