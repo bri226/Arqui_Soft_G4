@@ -175,7 +175,7 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFU-06) Mensajeria con usuarios: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
 
-(RFU-07) Red Social: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
+(RFU-07) Red Social para intercambio de libros: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
 
 #### 2.1.2. Catálogo de libros (Bri)
 
@@ -219,6 +219,20 @@ A continuación, se presenta una tabla que resume los atributos de calidad, sus 
 | Integridad | ESC-08| Base de Datos | Usuario | Intento de modificación no autorizada de datos | Sistema de gestión de bases de datos | Rechazo de la modificación y notificación al administrador | Los datos del usuario se mantienen intactos y sin alteraciones no autorizadas. |
 | Mantenibilidad | ESC-09 | Código Fuente | Desarrollador | Identificación de errores en el código | Herramientas de depuración | Registro y notificación de errores | Los errores son corregidos en un plazo de 24 horas desde la detección. |
 | Portabilidad | ESC-10 | Plataforma de Despliegue | Administrador | Cambio de proveedor de servicios en la nube | Configuración del servidor | Migración sin pérdida de datos y funcionalidades | La plataforma está completamente funcional en el nuevo proveedor en un plazo de 48 horas. |
+
+En la siguiente tabla se especifican a qué requerimientos funcionales estan relacionados los escenarios descritos.
+| Escenarios | Requerimiento Funcional Relacionado |
+|------------|--------------------------------------|
+| ESC-01     | RFU-06                               |
+| ESC-02     | RFU-01, RFU-03                        |
+| ESC-03     | RFU-02, RFU-03, RFU-03.1              |
+| ESC-04     | RFU-04                               |
+| ESC-05     | RFU-03, RFU-03.1                      |
+| ESC-06     | RFSP-01, RFSP-03                      |
+| ESC-07     | RFCL-01, RFCL-02, RFCL-03              |
+| ESC-08     | RFU-04                               |
+| ESC-09     | RFU-03, RFU-05, RFU-06, RFU-07         |
+| ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
 
 
