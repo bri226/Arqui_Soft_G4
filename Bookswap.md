@@ -253,7 +253,7 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 - **Seguridad:**
   - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
   - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
-  - **Políticas de Seguridad Rigurosas:** Estableceremos una **política de seguridad rigurosa** que incluirá medidas como la autenticación de dos factores y el cifrado de datos tanto en reposo como en tránsito para garantizar la protección completa de los datos del usuario y la integridad del sistema.
+  
 
   
 ## 3. Decisiones a Nivel de Arquitectura
