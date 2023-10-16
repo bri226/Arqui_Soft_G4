@@ -213,9 +213,12 @@ La plataforma de compra y venta de libros de segunda mano estará compuesto de e
 * **Módulo de pagos**: Se encargará de dar la opción al usuario de elegir el método de pago, como efectivo, registrar una tarjeta de crédito/debito, o Paypal. Se integrará con pasarelas de pago para asegurar las transacciones.
 * **Módulo de gestión de envíos**: Se encargará de mostrar el estado actual de la entrega de un pedido, incluyendo la visualización de la posición en tiempo real de un repartidor.
 
-#### 3.1. Asignación de Responsabilidades
-
 #### 3.2. Modelo de Coordinación
+El modelo de coordinación define cómo los componentes de software se comunican entre sí. Estos componentos pueden ser internos la sistema o pueden ser servicios externos. Para el contexto de esta plataforma web de compra y venta de libros de segunda mano, se han considerado tecnologías síncronas, asíncronas y stateful.
+
+* **Stateful**: Para la funcionalidad de carrito de compras, se debe poder guardar el estado de los productos dentro de este entre sesiones de un usuario
+* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios. Por último, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
+* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
 
 #### 3.3. Modelo de Datos
 
