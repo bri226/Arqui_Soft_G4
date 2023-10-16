@@ -201,10 +201,27 @@ Los stakeholders seleccionados para este trabajo son:
 
 (RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
+## 3. Decisiones a nivel de arquitectura
 
+#### 3.1. Asignación de Responsabilidades
+La plataforma de compra y venta de libros de segunda mano estará compuesto de estos modulos:
 
+* **Módulo de gestión de usuarios**: Se encargará de crear y autenticar usuarios, al igual que encargarse de su modificación.
+* **Módulo de chat**: Se encargará de gestionar de manera segura la conversación entre usuarios, sean compradores o vendedores, y asegurar el envío y recepción de mensajes.
+* **Módulo de libros**: Se encargará de gestionar la información de los libros en la plataforma, como la creacion de un anuncio de un libro por un vendedor, la visualización del detalle de este, y poder visualizar un listado de libros.
+* **Módulo de ventas**: Se encargará de dar la funcionalidad de carrito de compras a un usuario, al igual que el registro de pedidos.
+* **Módulo de pagos**: Se encargará de dar la opción al usuario de elegir el método de pago, como efectivo, registrar una tarjeta de crédito/debito, o Paypal. Se integrará con pasarelas de pago para asegurar las transacciones.
+* **Módulo de gestión de envíos**: Se encargará de mostrar el estado actual de la entrega de un pedido, incluyendo la visualización de la posición en tiempo real de un repartidor.
 
+#### 3.1. Asignación de Responsabilidades
 
+#### 3.2. Modelo de Coordinación
+
+#### 3.3. Modelo de Datos
+
+#### 3.4. Mapeo entre Elementos de Arquitectura
+
+#### 3.5. Elección de Tecnología
 
 
 
