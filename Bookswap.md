@@ -163,35 +163,35 @@ Los stakeholders seleccionados para este trabajo son:
 #### 2.1.1. Usuario (Alex)
 
 
-- <b> Registro de Usuarios</b>: Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
-- <b>Correo de confirmación</b>: Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
-- <b>Inicio de Sesión</b>: Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
-- <b>Inicio Erróneo</b>: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
-- <b>Gestión de Perfil</b>: Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
-- <b>Gestion de Historial</b>: Los usuarios pueden ver y editar su historial de intercambio de libros.
-- <b>Mensajeria con usuarios</b>: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
-- <b> Red Social para intercambio de libros</b>: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
- - <b> Publicar libros en venta </b>: Los usuarios pueden subir la información de los libros que quieren vender.
+- **Registro de Usuarios (RFU-01)**: Los usuarios deben poder registrarse en la plataforma proporcionando información como nombre, dirección de correo electrónico y contraseña.
+- **Correo de confirmación (RFU-02)**: Los usuarios recibiran un correo electrónico de confirmación para verificar la dirección de correo electrónico del usuario.
+- **Inicio de Sesión (RFU-03)**: Los usuarios registrados deben poder iniciar sesión en sus cuentas utilizando su correo electrónico y contraseña.
+- **Inicio Erróneo (RFU-03.1)**: Los usuarios en caso ingresen credenciales incorrectas, el sistema debe mostrar un mensaje de error, indicando que ingresen correctamente sus credenciales.
+- **Gestión de Perfil (RFU-04)**: Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección , contraseña y foto de perfil.
+- **Gestion de Historial (RFU-05)**: Los usuarios pueden ver y editar su historial de intercambio de libros.
+- **Mensajeria con usuarios (RFU-06)**: Los usuarios pueden enviar mensajes privados a los potenciales compradores/vendedores. 
+- **Red Social para intercambio de libros (RFU-07)**: Los usuarios van a poder subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio, se podra dar me gusta a las publicaciones y comentar los posts, además se podrá agregar amigos.
+ - **Publicar libros en venta (RFU-08)** </b>: Los usuarios pueden subir la información de los libros que quieren vender.
 
 #### 2.1.2. Catálogo de libros (Bri)
 
-- <b>Búsqueda de Libros</b>: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
-- <b>Exploración de Categorías</b>: Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
-- <b>Detalles del libro</b>: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
-- <b>Lista de libros deseados</b>: Los usuarios deben poder agregar libros a su lista de deseos.
+- **Búsqueda de Libros (RFCL-01)**: Los usuarios deben poder buscar libros en la plataforma utilizando filtros como título, autor, género, ubicación.
+- **Exploración de Categorías (RFCL-02)**: Los usuarios deben poder navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas.
+- **Detalles del libro (RFCL-03)**: Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor.
+- **Lista de libros deseados (RFCL-04)**: Los usuarios deben poder agregar libros a su lista de deseos.
 
 #### 2.1.3. Sistema de pagos (Daniel)
 
-- <b>Procesamiento de Pagos</b>: El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
-- <b>Gestión de Métodos de Pago o Cobro</b>: Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias.
-- <b>Confirmación de Pagos</b>: Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
+- **Procesamiento de Pagos (RFSP-01)**: El sistema debe ser capaz de procesar pagos de manera segura y confiable cuando los usuarios realicen compras.
+- **Gestión de Métodos de Pago o Cobro (RFSP-02)**: Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias.
+- **Confirmación de Pagos (RFSP-03)**: Los usuarios deben recibir una confirmación de pago exitoso después de realizar una compra o intercambio.
 
 #### 2.1.4. Envío y logísticas (Micali)
 
-- <b>Cálculo de Costos de Envío</b>: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
-- <b>Seguimiento de Envíos</b>: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
-- <b>Opciones de Envío</b>: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
-- <b>Gestión de Devoluciones</b>: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
+- **Cálculo de Costos de Envío (RFEL-01)**: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
+- **Seguimiento de Envíos (RFEL-02)**: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
+- **Opciones de Envío (RFEL-03)**: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
+- **Gestión de Devoluciones (RFEL-04)**: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
 
 <img src="img/modulos.jpg" width="60%"/>
 
