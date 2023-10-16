@@ -234,11 +234,16 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 | ESC-09     | RFU-03, RFU-05, RFU-06, RFU-07         |
 | ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
-
-
-
-
-### REFERENCIAS
+### 2.4 Restricciones
+## 3. Decisiones a Nivel de Arquitectura
+### 3.1. Asignaciones de Responsibilidades
+### 3.2. Modelos de Coordinación
+### 3.3. Modelos de datos
+### 3.4. Mapeo entre Elementos de Arquitectura
+### 3.5. Elección de Tecnología
+## 4. Tácticas
+## 5. Anexo: Tópicos en Arquitectura de Software
+## 6. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
 Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
