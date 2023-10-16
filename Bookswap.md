@@ -225,7 +225,7 @@ A continuación, se presenta una tabla que resume los atributos de calidad, sus 
 En la siguiente tabla se especifican a qué requerimientos funcionales estan relacionados los escenarios descritos.
 | Escenarios | Requerimiento Funcional Relacionado |
 |------------|--------------------------------------|
-| ESC-01     | RFU-06                               |
+| ESC-01     | RFU-06, RFU-08                              |
 | ESC-02     | RFU-01, RFU-03                        |
 | ESC-03     | RFU-02, RFU-03, RFU-03.1              |
 | ESC-04     | RFU-04                               |
