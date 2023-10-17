@@ -426,6 +426,7 @@ BookSwap busca expandir su funcionalidad y biblioteca de contenido mediante la c
 - Variedad de Contenido: La integración con proveedores externos permitirá a los usuarios acceder a una gran diversidad de obras, desde bestsellers hasta títulos menos conocidos pero igualmente valiosos.
 - Atracción de Usuarios: La oferta de una biblioteca amplia y diversa atraerá a más usuarios a la plataforma, lo que puede resultar en un aumento en la retención y la participación.
 - Ingresos Incrementados: Al facilitar transacciones y suscripciones, BookSwap puede generar ingresos a través de ventas y suscripciones, contribuyendo así a la sostenibilidad financiera de la plataforma.
+
 ### 4.4 Rendimiento
 El rendimiento toma importancia en la plataforma ya que diferentes modulos dependen de esta para asegurar la experiencia del usuario. Entre estos módulos, se encuentra el módulo de chat entre usuarios, para poder recibir y enviar mensajes de manera rápida, el módulo de libros, para hacer búsquedas filtradas en la basededatos y recibir estos resultados a una velocidad aceptable
 
