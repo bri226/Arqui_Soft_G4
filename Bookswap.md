@@ -289,8 +289,8 @@ Para el modelo de los datos, se considerarán los siguientes aspectos:
 * **Abstracciones**: Se consideraron los siguientes modelos, los cuales son la base de toda la plataforma
   * *Usuario*: Datos del usuario y de la persona
   * *Libro*: Datos de los libros disponibles en la plataforma
-  * *Pedido*: Datos de los pedidos relacionados
-  * *Transacción*: Datos de las transaccioens realizadas para los pedidos
+  * *Orden*: Datos de las órdenes relacionadas
+  * *Métodos de Pago*: Datos de los métodos de pago utilizados en las transacciones.
   * *Chat*: Datos de los mensajes de los chats entre usuarios 
   * *Delivery*: Datos de geolocalización de un repartidor
 * **Base de datos SQL**: Se utilizará una base de datos PostgreSQL para almacenar los datos de los usuarios, libros, pedidos, y transacciones
@@ -303,28 +303,63 @@ La plataforma web permite a los usuarios comprar y vender libros de segunda mano
 - **Historial de Órdenes**: Esta tabla almacena información sobre el seguimiento de una orden. Un id de historial solo puede tener a una orden, pero una orden puede estar en varios id de historial. En ese sentido, cada vez que el estado de la orden cambie durante el seguimiento, se generará un nuevo registro con el mismo id de la orden y un nuevo estado.
 - **Libro**: Esta tabla almacena información sobre los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el título, el autor, la editorial, el ISBN, el número de páginas, la fecha de publicación, el idioma y el estado.
 - **Orden**: Esta tabla almacena información sobre las órdenes realizadas en la plataforma. Los campos incluyen la fecha de la orden, el precio total, el método de pago y el estado de la orden.
+- **Orden Detalle**: Esta tabla almacena información que relaciona a la tabla Orden y Libro.
 - **Método de pago**: Esta tabla almacena información sobre los métodos de pago aceptados por la plataforma. Los campos incluyen el nombre del método de pago y el tipo de método de pago.
 - **Categoría**: Esta tabla almacena información sobre las categorías de libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre de la categoría y el tipo de categoría.
 - **Editorial**: Esta tabla almacena información sobre las editoriales de los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre de la editorial y el país de origen.
 - **Autor**: Esta tabla almacena información sobre los autores de los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre del autor y el país de origen.
 
-<img src="img/modelo_bd.jpg" width="100%"/>
+<img src="img/diagrama_bd.jpg" width="100%"/>
 
 #### Base de Datos No Relacional
 
 Se utilizará para almacenar datos menos estructurados, como registros de actividad. La flexibilidad de una base de datos no relacional en términos de esquema permite adaptarse fácilmente a los cambios y almacenar información variada en un mismo documento.
 
 ```
-  actividad_usuario: {
-      "_id": ObjectId("5f8742c37b6d4b548352d8a0"),
-      "usuario_id": "user123",
-      "tipo_actividad": "login",
-      "timestamp": ISODate("2023-01-15T12:30:00Z"),
-      "detalles": {
-        "direccion_ip": "192.168.1.1",
-        "navegador": "Chrome"
-      }
+  
+  "conversacion": [
+    {
+      "mensaje_id": 1,
+      "emisor": "usuario_comprador",
+      "contenido": "Hola, me envías más fotos del libro 'Fortaleza digital'?",
+      "timestamp": "2023-10-10T12:30:00"
+    },
+    {
+      "mensaje_id": 2,
+      "emisor": "usuario_vendedor",
+      "contenido": "Sí, claro. Te envío.",
+      "timestamp": "2023-10-10T12:35:00"
+    },
+  ]
+```
+
+```
+{
+  "venta": {
+    "venta_id": 5001,
+    "libro": {
+      "id": 101,
+      "titulo": "Libro1"
+    },
+    "comprador": {
+      "id": 2,
+      "nombre": "Comprador1",
+      "direccion_envio": "Calle Principal 456, Ciudad"
+    },
+    "vendedor": {
+      "id": 1,
+      "nombre": "Vendedor1"
+    },
+    "precio_final": 15.99,
+    "fecha_venta": "2023-10-17",
+    "costo_envio": 5.00,
+    "estado_envio": "En camino",
+    "informacion_envio": {
+      "tiempo_estimado": "2 días hábiles",
+      "propina_motorizado": 2.50
+    }
   }
+}
 ```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
