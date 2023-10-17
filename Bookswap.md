@@ -427,6 +427,20 @@ BookSwap busca expandir su funcionalidad y biblioteca de contenido mediante la c
 - Atracción de Usuarios: La oferta de una biblioteca amplia y diversa atraerá a más usuarios a la plataforma, lo que puede resultar en un aumento en la retención y la participación.
 - Ingresos Incrementados: Al facilitar transacciones y suscripciones, BookSwap puede generar ingresos a través de ventas y suscripciones, contribuyendo así a la sostenibilidad financiera de la plataforma.
 ### 4.4 Rendimiento
+El rendimiento toma importancia en la plataforma ya que diferentes modulos dependen de esta para asegurar la experiencia del usuario. Entre estos módulos, se encuentra el módulo de chat entre usuarios, para poder recibir y enviar mensajes de manera rápida, el módulo de libros, para hacer búsquedas filtradas en la basededatos y recibir estos resultados a una velocidad aceptable
+
+#### Medida de respuesta esperado 
+- Tiempo de carga promedio: 2s
+- Tiempo de respuesta promedio de Apis: 300ms
+
+#### Tácticas
+- **Controlar la demanda de recursos**: 
+  - **Eficencia en el uso de recursos**: Tener revisiones periódicas del código para identificar funciones ineficientes o antipatrones. Identificación de code smells
+  - **Limitar solicitudes**: Limitar la cantidad de solicitudes que se pueda admitir a determinadas APIs en un determinado periodo de tiempo para estabilizar la carga utilizando rate limiting.
+- **Gestionar recursos**: 
+  - **Incrementar recursos**: Si es que la plataforma y a su vez la demanda crece, se aumentará la capacidad de los recursos o vertical o horizontalmente.
+  - **Concurrencia**: Aplicar técnicas de procesamiento en paralelo. Se puede complementar con la introducción de más recursos, incluído un load balancer.
+
 ### 4.5 Seguridad
 ## 5. Anexo: Tópicos en Arquitectura de Software
 ## 6. REFERENCIAS
