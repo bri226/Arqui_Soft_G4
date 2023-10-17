@@ -407,25 +407,11 @@ Las plataformas dedicadas al comercio están sujetas a cambios frecuentes, como 
 
 ### 4.3 Interoperabilidad
 La interoperabilidad en BookSwap se plantea como una táctica esencial para mejorar la experiencia del usuario y la eficiencia del sistema. La interoperabilidad se refiere a la capacidad del sistema para interactuar, operar y compartir datos con otros sistemas de forma efectiva y sin problemas. En el contexto de BookSwap, la interoperabilidad se centra en integrar diversas funcionalidades y características que permiten a los usuarios interactuar sin problemas con la plataforma y a la plataforma interactuar eficientemente con otros sistemas externos. A continuación, se presentan las tácticas específicas para garantizar la interoperabilidad en BookSwap:
-**Contexto:**
-BookSwap busca expandir su funcionalidad y biblioteca de contenido mediante la colaboración con sistemas de pago externos y proveedores de contenido. Integrar estos sistemas externos es esencial para ofrecer a los usuarios una experiencia completa y variada en la plataforma.
 
-**Decisiones:**
-
-1. **Integración con Plataformas de Pago:**
-   - Implementar Interfaces Seguras: Desarrollaremos interfaces seguras y cifradas para la integración con sistemas de pago externos. Esto garantizará la seguridad de las transacciones financieras y protegerá la información financiera de los usuarios.
-   - Facilitar Transacciones y Suscripciones: La integración permitirá a los usuarios realizar transacciones financieras sin problemas, incluyendo la compra de libros y la suscripción a servicios premium. Se establecerán procesos claros y fáciles de seguir para garantizar una experiencia de usuario fluida.
-
-2. **Conexión con Proveedores de Contenido:**
-   - Establecer Conexiones Confiables: Estableceremos conexiones confiables y seguras con proveedores de contenido externos. Esto implicará la implementación de protocolos estándar de la industria para la transmisión segura de datos.
-   - Ampliar la Biblioteca de BookSwap: Al conectar con varios proveedores de contenido, BookSwap podrá expandir su biblioteca con una amplia variedad de obras y libros. Esto incluirá no solo libros populares, sino también obras de autores independientes y títulos especializados.
-
-**Consecuencias:**
-
-- Transacciones Seguras: Los usuarios podrán realizar transacciones financieras con confianza, sabiendo que sus datos están protegidos.
-- Variedad de Contenido: La integración con proveedores externos permitirá a los usuarios acceder a una gran diversidad de obras, desde bestsellers hasta títulos menos conocidos pero igualmente valiosos.
-- Atracción de Usuarios: La oferta de una biblioteca amplia y diversa atraerá a más usuarios a la plataforma, lo que puede resultar en un aumento en la retención y la participación.
-- Ingresos Incrementados: Al facilitar transacciones y suscripciones, BookSwap puede generar ingresos a través de ventas y suscripciones, contribuyendo así a la sostenibilidad financiera de la plataforma.
+   - **Implementar Interfaces Seguras**: Desarrollaremos interfaces seguras y cifradas para la integración con sistemas de pago externos. Esto garantizará la seguridad de las transacciones financieras y protegerá la información financiera de los usuarios.
+   - **Facilitar Transacciones y Suscripciones**: La integración permitirá a los usuarios realizar transacciones financieras sin problemas, incluyendo la compra de libros y la suscripción a servicios premium. Se establecerán procesos claros y fáciles de seguir para garantizar una experiencia de usuario fluida.
+   - **Establecer Conexiones Confiables**: Estableceremos conexiones confiables y seguras con proveedores de contenido externos. Esto implicará la implementación de protocolos estándar de la industria para la transmisión segura de datos.
+   - **Ampliar la Biblioteca de BookSwap**: Al conectar con varios proveedores de contenido, BookSwap podrá expandir su biblioteca con una amplia variedad de obras y libros. Esto incluirá no solo libros populares, sino también obras de autores independientes y títulos especializados.
 
 ### 4.4 Rendimiento
 El rendimiento toma importancia en la plataforma ya que diferentes modulos dependen de esta para asegurar la experiencia del usuario. Entre estos módulos, se encuentra el módulo de chat entre usuarios, para poder recibir y enviar mensajes de manera rápida, el módulo de libros, para hacer búsquedas filtradas en la basededatos y recibir estos resultados a una velocidad aceptable
