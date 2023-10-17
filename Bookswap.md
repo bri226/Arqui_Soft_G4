@@ -1,37 +1,5 @@
 # CASO DE NEGOCIO
 
-## LISTA DE PENDIENTES
-
-- [ ] Crear los mockups de la plataforma web
-- [ ] Definir cuáles serán los módulos
-- [ ] <b>Estructura</b>
-    - [ ] <b>Caso de Negocio</b>
-        - [ ] Generalidades :  Bri
-        - [ ] Modelo de Negocio : Bri
-        - [ ] Estructura del equipo
-        - [ ] Listado de Stakeholders
-    - [ ] <b>Requerimientos del Sistema</b> (deben ser por módulo, si hay req. transversales, definirlos tmbn) 
-        - [ ] <b>Requerimientos Funcionales</b>: Acotar o ampliar funcionalidad de soluciones tradicionales. Respaldados por mockups o prototipos.
-        - [ ] <b>Requerimientos de Atributos de Calidad (Escenarios)</b>: Además de su relación con los req. de sistema.
-        - [ ] <b>Restricciones</b>: Factores sobre los que no hay influencia directa.
-    - [ ] <b>Decisiones a nivel de arquitectura</b>: Usar categorías vistas en el curso.
-        - [ ] <b>Asignación de Responsabilidades</b> 
-        - [ ] <b>Modelo de Coordinación</b>
-        - [ ] <b>Modelo de Datos</b>
-        - [ ] <b>Mapeo entre Elementos de Arquitectura</b>
-        - [ ] <b>Elección de Tecnología</b>
-    - [ ] <b>Tácticas </b>: A nivel de disponibilidad, mantenibilidad, interoperabilidad, rendimiento, seguridad
-    - [ ] <b>Tópicos en Arquitectura de SW (Cada uno) </b>: Se coloca como anexo. Se elabora un video explicativo y mostrando código de demo.
-        - [ ] Desarrollo conceptual
-        - [ ] Consideraciones técnicas: instalación y configuración
-            - [ ] Instalación / Configuración de Servicio
-            - [ ] Primeros pasos
-        - [ ] <b>Demo</b>
-            - [ ] Escenario práctico
-            - [ ] Pasos para la demo
-
-
-
 ## 1. Bookswap
 
 ### a. Generalidades
@@ -195,18 +163,6 @@ Los stakeholders seleccionados para este trabajo son:
 
 <img src="img/modulos.jpg" width="60%"/>
 
-
-### 2.2. Requerimiento de atributos de calidad (Escenarios)
-
-(RFEL-01) Cálculo de Costos de Envío: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
-
-(RFEL-02) Seguimiento de Envíos: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
-
-(RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
-
-(RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
-
-
 ### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
 
 1. Los usuarios acceden a la página de inicio de BookSwap.
@@ -283,7 +239,7 @@ El modelo de coordinación define cómo los componentes de software se comunican
 * **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
 * **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros. Por último, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios, al igual que la funcionalidad de rasterar al repartidor en tiempo real.
 
-#### 3.3. Modelo de Datos
+### 3.3. Modelo de Datos
 Para el modelo de los datos, se considerarán los siguientes aspectos:
 
 * **Abstracciones**: Se consideraron los siguientes modelos, los cuales son la base de toda la plataforma
@@ -292,7 +248,6 @@ Para el modelo de los datos, se considerarán los siguientes aspectos:
   * *Orden*: Datos de las órdenes relacionadas
   * *Métodos de Pago*: Datos de los métodos de pago utilizados en las transacciones.
   * *Chat*: Datos de los mensajes de los chats entre usuarios 
-  * *Delivery*: Datos de geolocalización de un repartidor
 * **Base de datos SQL**: Se utilizará una base de datos PostgreSQL para almacenar los datos de los usuarios, libros, pedidos, y transacciones
 * **Base de datos NoSQL**: Se utilizará una base de datos MongoDB para almacenar la información sobre los chats entre usuarios y la geolocalización del repartidor en los deliveries.
 La plataforma web permite a los usuarios comprar y vender libros de segunda mano. Los usuarios pueden registrarse en la plataforma y crear cuentas. Una vez que los usuarios tienen una cuenta, pueden buscar libros, agregar libros a su carrito de compras y realizar pagos.
@@ -363,23 +318,102 @@ Se utilizará para almacenar datos menos estructurados, como registros de activi
 ```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
+Se muestra el mapeo de elementos a nivel de despliegue. a arquitectura de la aplicación web es de tres capas y se divide en:
+
+- **Front-end**, es la capa que los usuarios ven y con la que interactúan. Está implementado en React.js. El front-end se ejecuta en el navegador del usuario.
+
+
+- **Back-end** de la aplicación es la capa que proporciona acceso a los datos y funcionalidades de la aplicación. Está implementado en express.js con Javascript como lenguaje de programación. El API se ejecuta en un servidor.
+
+- **Base de datos**  almacena los datos de la aplicación. Está implementada en dos sistemas de gestión de bases de datos: PostgreSQL y MongoDB. La base de datos se ejecuta en un servidor.
+
+<img src="img/diagrama_despliegue.png" width="100%">
 
 ### 3.5. Elección de Tecnología
+Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
 
-- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
-  
-- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
+### Tailwind CSS para el Framework de Estilos
 
-- **Bases de Datos:**
-  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
-  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
-  
-- **Servidores y Despliegue:**
-  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
-  
-- **Seguridad:**
-  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
-  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Propuesto |
+| **Contexto** | La necesidad de un enfoque rápido y eficiente para el diseño y estilo del sistema |
+| **Decisión** | Se opta por Tailwind CSS como el framework de estilos debido a su enfoque utility-first que permite un desarrollo más rápido y eficiente del diseño de la interfaz de usuario. |
+| **Consecuencias** | Esto facilita el desarrollo de la interfaz de usuario, permitiendo cambios y personalizaciones rápidas sin necesidad de escribir CSS personalizado, agilizando así el proceso de desarrollo del frontend. |
+
+### Jest para el Framework de Pruebas
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta de pruebas sólida y ampliamente adoptada para garantizar la calidad del código |
+| **Decisión** | Se elige Jest como el framework de pruebas debido a su popularidad, capacidad para pruebas unitarias y de integración, y su integración fácil con proyectos de JavaScript y React. |
+| **Consecuencias** | Jest proporciona un entorno de pruebas robusto, permitiendo una cobertura completa de pruebas para el código frontend y backend del sistema. Facilita la detección temprana de errores y garantiza la calidad del código durante el desarrollo. |
+
+### React para el Framework Frontend
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de un framework frontend moderno, reactivo y eficiente para crear una interfaz de usuario dinámica e interactiva |
+| **Decisión** | Se selecciona React como el framework frontend debido a su flexibilidad, rendimiento y comunidad activa. React permite la creación de componentes reutilizables, facilitando el desarrollo y mantenimiento de una interfaz de usuario compleja. |
+| **Consecuencias** | Esto facilita la creación de interfaces de usuario interactivas y dinámicas, proporcionando una experiencia de usuario mejorada y una arquitectura modular que permite el escalado del sistema. |
+
+### Node.js y Express.js para el Backend
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de un backend flexible y eficiente que pueda manejar una gran cantidad de solicitudes de forma rápida y confiable |
+| **Decisión** | Se elige Node.js junto a Express.js como el framework backend debido a su naturaleza sin bloqueo (non-blocking), lo que permite el manejo eficiente de solicitudes concurrentes y su sintaxis simple y fácil de entender para desarrolladores. |
+| **Consecuencias** | Esto facilita el desarrollo de APIs robustas y escalables, permitiendo una gestión eficiente de las operaciones de backend, así como una fácil integración con bases de datos y otros servicios del sistema. |
+
+
+### PostgreSQL para la Base de Datos Relacional
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una base de datos relacional que pueda manejar de forma segura y eficiente los datos críticos del usuario |
+| **Decisión** | Se selecciona PostgreSQL como la base de datos relacional debido a su robustez, confiabilidad, capacidad de manejar grandes volúmenes de datos y su conformidad con los estándares de SQL. |
+| **Consecuencias** | PostgreSQL proporciona un sistema de gestión de bases de datos confiable y escalable, permitiendo un almacenamiento seguro y eficiente de datos del usuario, asegurando la integridad y consistencia de los datos. |
+
+### MongoDB para la Base de Datos No Relacional
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una base de datos no relacional para datos menos estructurados y flexibles |
+| **Decisión** | Se opta por MongoDB como la base de datos no relacional debido a su naturaleza de documentos JSON flexibles, que permite el almacenamiento de datos no estructurados y semiestructurados de manera eficiente. |
+| **Consecuencias** | MongoDB proporciona un almacenamiento de datos flexible y escalable, permitiendo el manejo de datos variados y cambiantes de forma eficiente, facilitando la adaptación del sistema a las necesidades cambiantes del usuario. |
+
+### Amazon Web Services para el Despliegue
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una infraestructura de alojamiento confiable y escalable para el despliegue del sistema |
+| **Decisión** | Se elige Amazon Web Services (AWS) como la plataforma de despliegue debido a su confiabilidad, escalabilidad, servicios diversos y facilidad de uso para implementaciones de aplicaciones en la nube. |
+| **Consecuencias** | AWS permite un despliegue sencillo y seguro del sistema en la nube, proporcionando flexibilidad para escalar recursos según la demanda del usuario, asegurando así la disponibilidad y rendimiento del sistema. |
+
+### Postman para Herramientas de Pruebas API
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta para probar y validar las APIs de forma eficiente |
+| **Decisión** | Se selecciona Postman como la herramienta para pruebas de APIs debido a su interfaz intuitiva, capacidad para enviar solicitudes HTTP y verificar respuestas fácilmente, y su capacidad para automatizar pruebas de API complejas. |
+| **Consecuencias** | Postman simplifica el proceso de pruebas de API, permitiendo una validación rápida y precisa de las funciones del sistema, facilitando así la detección temprana de errores y su corrección eficiente. |
+
+### Jira para Herramientas de Colaboración
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta de colaboración y gestión de proyectos eficiente y versátil |
+| **Decisión** | Se opta por Jira como la herramienta de colaboración debido a su amplia gama de funcionalidades para la gestión de proyectos, seguimiento de problemas, planificación ágil y colaboración en equipo. |
+| **Consecuencias** | Jira facilita la colaboración y la gestión del proyecto, permitiendo un seguimiento detallado del progreso, una asignación efectiva de tareas, la gestión eficiente de problemas y una comunicación fluida entre los miembros del equipo, asegurando así un desarrollo coordinado y eficaz del sistema. |
+
 ## 4. TÁCTICAS
 
 ### 4.1 Disponibilidad
@@ -418,25 +452,11 @@ Las plataformas dedicadas al comercio están sujetas a cambios frecuentes, como 
 
 ### 4.3 Interoperabilidad
 La interoperabilidad en BookSwap se plantea como una táctica esencial para mejorar la experiencia del usuario y la eficiencia del sistema. La interoperabilidad se refiere a la capacidad del sistema para interactuar, operar y compartir datos con otros sistemas de forma efectiva y sin problemas. En el contexto de BookSwap, la interoperabilidad se centra en integrar diversas funcionalidades y características que permiten a los usuarios interactuar sin problemas con la plataforma y a la plataforma interactuar eficientemente con otros sistemas externos. A continuación, se presentan las tácticas específicas para garantizar la interoperabilidad en BookSwap:
-**Contexto:**
-BookSwap busca expandir su funcionalidad y biblioteca de contenido mediante la colaboración con sistemas de pago externos y proveedores de contenido. Integrar estos sistemas externos es esencial para ofrecer a los usuarios una experiencia completa y variada en la plataforma.
 
-**Decisiones:**
-
-1. **Integración con Plataformas de Pago:**
-   - Implementar Interfaces Seguras: Desarrollaremos interfaces seguras y cifradas para la integración con sistemas de pago externos. Esto garantizará la seguridad de las transacciones financieras y protegerá la información financiera de los usuarios.
-   - Facilitar Transacciones y Suscripciones: La integración permitirá a los usuarios realizar transacciones financieras sin problemas, incluyendo la compra de libros y la suscripción a servicios premium. Se establecerán procesos claros y fáciles de seguir para garantizar una experiencia de usuario fluida.
-
-2. **Conexión con Proveedores de Contenido:**
-   - Establecer Conexiones Confiables: Estableceremos conexiones confiables y seguras con proveedores de contenido externos. Esto implicará la implementación de protocolos estándar de la industria para la transmisión segura de datos.
-   - Ampliar la Biblioteca de BookSwap: Al conectar con varios proveedores de contenido, BookSwap podrá expandir su biblioteca con una amplia variedad de obras y libros. Esto incluirá no solo libros populares, sino también obras de autores independientes y títulos especializados.
-
-**Consecuencias:**
-
-- Transacciones Seguras: Los usuarios podrán realizar transacciones financieras con confianza, sabiendo que sus datos están protegidos.
-- Variedad de Contenido: La integración con proveedores externos permitirá a los usuarios acceder a una gran diversidad de obras, desde bestsellers hasta títulos menos conocidos pero igualmente valiosos.
-- Atracción de Usuarios: La oferta de una biblioteca amplia y diversa atraerá a más usuarios a la plataforma, lo que puede resultar en un aumento en la retención y la participación.
-- Ingresos Incrementados: Al facilitar transacciones y suscripciones, BookSwap puede generar ingresos a través de ventas y suscripciones, contribuyendo así a la sostenibilidad financiera de la plataforma.
+   - **Implementar Interfaces Seguras**: Desarrollaremos interfaces seguras y cifradas para la integración con sistemas de pago externos. Esto garantizará la seguridad de las transacciones financieras y protegerá la información financiera de los usuarios.
+   - **Facilitar Transacciones y Suscripciones**: La integración permitirá a los usuarios realizar transacciones financieras sin problemas, incluyendo la compra de libros y la suscripción a servicios premium. Se establecerán procesos claros y fáciles de seguir para garantizar una experiencia de usuario fluida.
+   - **Establecer Conexiones Confiables**: Estableceremos conexiones confiables y seguras con proveedores de contenido externos. Esto implicará la implementación de protocolos estándar de la industria para la transmisión segura de datos.
+   - **Ampliar la Biblioteca de BookSwap**: Al conectar con varios proveedores de contenido, BookSwap podrá expandir su biblioteca con una amplia variedad de obras y libros. Esto incluirá no solo libros populares, sino también obras de autores independientes y títulos especializados.
 
 ### 4.4 Rendimiento
 El rendimiento toma importancia en la plataforma ya que diferentes modulos dependen de esta para asegurar la experiencia del usuario. Entre estos módulos, se encuentra el módulo de chat entre usuarios, para poder recibir y enviar mensajes de manera rápida, el módulo de libros, para hacer búsquedas filtradas en la basededatos y recibir estos resultados a una velocidad aceptable
@@ -473,9 +493,10 @@ La seguridad es indispensable ya que la plataforma debe proteger la información
   - Realizar copias de seguridad periódicas de datos críticos y sistemas para facilitar la restauración en caso de un ataque exitoso.
 
 ## 5. Anexo: Tópicos en Arquitectura de Software
+## 6. Diagrama de Arquitectura
+<img src="img/DiagramaArq.png" width="100%"/>
 
-
-## 6. REFERENCIAS
+## 7. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
 Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
