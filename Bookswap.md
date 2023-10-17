@@ -217,10 +217,21 @@ La plataforma de compra y venta de libros de segunda mano estará compuesto de e
 El modelo de coordinación define cómo los componentes de software se comunican entre sí. Estos componentos pueden ser internos la sistema o pueden ser servicios externos. Para el contexto de esta plataforma web de compra y venta de libros de segunda mano, se han considerado tecnologías síncronas, asíncronas y stateful.
 
 * **Stateful**: Para la funcionalidad de carrito de compras, se debe poder guardar el estado de los productos dentro de este entre sesiones de un usuario
-* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios. Por último, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
-* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
+* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
+* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros. Por último, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios, al igual que la funcionalidad de rasterar al repartidor en tiempo real.
 
 #### 3.3. Modelo de Datos
+Para el modelo de los datos, se considerarán los siguientes aspectos:
+
+* **Abstracciones**: Se consideraron los siguientes modelos, los cuales son la base de toda la plataforma
+  * *Usuario*: Datos del usuario y de la persona
+  * *Libro*: Datos de los libros disponibles en la plataforma
+  * *Pedido*: Datos de los pedidos relacionados
+  * *Transacción*: Datos de las transaccioens realizadas para los pedidos
+  * *Chat*: Datos de los mensajes de los chats entre usuarios 
+  * *Delivery*: Datos de geolocalización de un repartidor
+* **Base de datos SQL**: Se utilizará una base de datos PostgreSQL para almacenar los datos de los usuarios, libros, pedidos, y transacciones
+* **Base de datos NoSQL**: Se utilizará una base de datos MongoDB para almacenar la información sobre los chats entre usuarios y la geolocalización del repartidor en los deliveries.
 
 #### 3.4. Mapeo entre Elementos de Arquitectura
 
