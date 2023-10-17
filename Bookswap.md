@@ -259,7 +259,7 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 
 ## 3. Decisiones a nivel de arquitectura
 
-#### 3.1. Asignación de Responsabilidades
+### 3.1. Asignación de Responsabilidades
 La plataforma de compra y venta de libros de segunda mano estará compuesto de estos modulos:
 
 * **Módulo de gestión de usuarios**: Se encargará de crear y autenticar usuarios, al igual que encargarse de su modificación.
@@ -269,19 +269,30 @@ La plataforma de compra y venta de libros de segunda mano estará compuesto de e
 * **Módulo de pagos**: Se encargará de dar la opción al usuario de elegir el método de pago, como efectivo, registrar una tarjeta de crédito/debito, o Paypal. Se integrará con pasarelas de pago para asegurar las transacciones.
 * **Módulo de gestión de envíos**: Se encargará de mostrar el estado actual de la entrega de un pedido, incluyendo la visualización de la posición en tiempo real de un repartidor.
 
-#### 3.2. Modelo de Coordinación
+### 3.2. Modelo de Coordinación
 El modelo de coordinación define cómo los componentes de software se comunican entre sí. Estos componentos pueden ser internos la sistema o pueden ser servicios externos. Para el contexto de esta plataforma web de compra y venta de libros de segunda mano, se han considerado tecnologías síncronas, asíncronas y stateful.
 
 * **Stateful**: Para la funcionalidad de carrito de compras, se debe poder guardar el estado de los productos dentro de este entre sesiones de un usuario
 * **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios. Por último, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
 * **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
 
-#### 3.3. Modelo de Datos
+### 3.3. Modelo de Datos
 
-#### 3.4. Mapeo entre Elementos de Arquitectura
+### 3.4. Mapeo entre Elementos de Arquitectura
 
-#### 3.5. Elección de Tecnología
-## 4. Tácticas
+### 3.5. Elección de Tecnología
+## 4. TÁCTICAS
+
+### 4.1 Disponibilidad
+Asegurar una alta disponibilidad es esencial en la plataforma para garantizar que los usuarios puedan acceder a la aplicación y realizar transacciones de compra y venta en cualquier momento. Por lo que se implementará un sistema de monitereo para aplicaciones que permita detectar y prevenir fallas.
+
+#### Medida de respuesta esperado 
+- Disponibilidad del sistema: 99.9%
+- Downtime / Año: 8.8h
+### 4.2 Mantenibilidad
+### 4.3 Interoperabilidad
+### 4.4 Rendimiento
+### 4.5 Seguridad
 ## 5. Anexo: Tópicos en Arquitectura de Software
 ## 6. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
