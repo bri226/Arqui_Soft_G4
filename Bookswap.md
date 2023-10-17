@@ -257,13 +257,30 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
   - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
   
 
-  
-## 3. Decisiones a Nivel de Arquitectura
-### 3.1. Asignaciones de Responsibilidades
-### 3.2. Modelos de Coordinación
-### 3.3. Modelos de datos
-### 3.4. Mapeo entre Elementos de Arquitectura
-### 3.5. Elección de Tecnología
+## 3. Decisiones a nivel de arquitectura
+
+#### 3.1. Asignación de Responsabilidades
+La plataforma de compra y venta de libros de segunda mano estará compuesto de estos modulos:
+
+* **Módulo de gestión de usuarios**: Se encargará de crear y autenticar usuarios, al igual que encargarse de su modificación.
+* **Módulo de chat**: Se encargará de gestionar de manera segura la conversación entre usuarios, sean compradores o vendedores, y asegurar el envío y recepción de mensajes.
+* **Módulo de libros**: Se encargará de gestionar la información de los libros en la plataforma, como la creacion de un anuncio de un libro por un vendedor, la visualización del detalle de este, y poder visualizar un listado de libros.
+* **Módulo de ventas**: Se encargará de dar la funcionalidad de carrito de compras a un usuario, al igual que el registro de pedidos.
+* **Módulo de pagos**: Se encargará de dar la opción al usuario de elegir el método de pago, como efectivo, registrar una tarjeta de crédito/debito, o Paypal. Se integrará con pasarelas de pago para asegurar las transacciones.
+* **Módulo de gestión de envíos**: Se encargará de mostrar el estado actual de la entrega de un pedido, incluyendo la visualización de la posición en tiempo real de un repartidor.
+
+#### 3.2. Modelo de Coordinación
+El modelo de coordinación define cómo los componentes de software se comunican entre sí. Estos componentos pueden ser internos la sistema o pueden ser servicios externos. Para el contexto de esta plataforma web de compra y venta de libros de segunda mano, se han considerado tecnologías síncronas, asíncronas y stateful.
+
+* **Stateful**: Para la funcionalidad de carrito de compras, se debe poder guardar el estado de los productos dentro de este entre sesiones de un usuario
+* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios. Por último, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
+* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
+
+#### 3.3. Modelo de Datos
+
+#### 3.4. Mapeo entre Elementos de Arquitectura
+
+#### 3.5. Elección de Tecnología
 ## 4. Tácticas
 ## 5. Anexo: Tópicos en Arquitectura de Software
 ## 6. REFERENCIAS
