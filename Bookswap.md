@@ -208,47 +208,25 @@ Los stakeholders seleccionados para este trabajo son:
 
 
 ### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
-1. **Registro de Usuarios:**
-   - Los usuarios se registran en la plataforma proporcionando información como **nombre, dirección de correo electrónico y contraseña (RFU-01)**.
 
-2. **Correo de Confirmación:**
-   - Los usuarios reciben un **correo electrónico de confirmación para verificar su dirección de correo electrónico (RFU-02)**.
-
-3. **Inicio de Sesión:**
-   - Los usuarios registrados inician sesión en sus cuentas utilizando su **correo electrónico y contraseña (RFU-03)**.
-   - En caso de ingresar credenciales incorrectas, el sistema muestra un **mensaje de error indicando que ingresen correctamente sus credenciales (RFU-03.1)**.
-
-4. **Gestión de Perfil:**
-   - Los usuarios pueden editar su perfil, incluyendo información personal como **nombre, dirección, contraseña y foto de perfil (RFU-04)**.
-
-5. **Gestión de Historial:**
-   - Los usuarios pueden ver y editar su **historial de intercambio de libros (RFU-05)**.
-
-6. **Mensajería con Usuarios:**
-   - Los usuarios pueden enviar **mensajes privados a los potenciales compradores/vendedores (RFU-06)**.
-
-7. **Red Social para Intercambio de Libros:**
-   - Los usuarios pueden subir publicaciones en su página principal de los libros que les gusta o para ofrecer un intercambio.
-   - Pueden **dar me gusta a las publicaciones y comentar los posts (RFU-07)**.
-   - Además, los usuarios pueden **agregar amigos (RFU-07)**.
-
-8. **Publicar Libros en Venta:**
-   - Los usuarios pueden subir la información de los libros que quieren vender **(RFU-08)**.
-
-9. **Catálogo de Libros:**
-   - Los usuarios pueden **buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación (RFCL-01)**.
-   - Pueden **navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas (RFCL-02)**.
-   - Ver **información detallada sobre un libro, incluyendo su descripción, precio, estado y la ubicación del vendedor (RFCL-03)**.
-   - Los usuarios pueden **agregar libros a su lista de deseos (RFCL-04)**.
-
-10. **Sistema de Pagos:**
-    - El sistema es capaz de **procesar pagos de manera segura y confiable cuando los usuarios realicen compras (RFSP-01)**.
-    - Los usuarios pueden **agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias (RFSP-02)**.
-    - Los usuarios reciben una **confirmación de pago exitoso después de realizar una compra o intercambio (RFSP-03)**.
-
-11. **Envío y Logística:**
-    - El sistema calcula los **costos de envío para los compradores en función de la ubicación del vendedor y el comprador (RFEL-01)**.
-    - Los usuarios pueden **realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega (RFEL-02)**.
+1. Los usuarios acceden a la página de inicio de BookSwap.
+2. Los nuevos usuarios hacen clic en "Registro de Usuario" (RFU-01) y proporcionan su nombre, dirección de correo electrónico y contraseña.
+3. Después de completar el registro, se envía un correo de confirmación (RFU-02) para verificar la dirección de correo electrónico.
+4. Los usuarios registrados pueden iniciar sesión utilizando su correo electrónico y contraseña en "Inicio de Sesión" (RFU-03). En caso de ingreso erróneo de credenciales, se muestra un mensaje de error (RFU-03.1).
+5. Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección, contraseña y foto de perfil en "Gestión de Perfil" (RFU-04).
+6. Los usuarios pueden ver y editar su historial de intercambio de libros en "Gestión de Historial" (RFU-05).
+7. Los usuarios pueden enviar mensajes privados a otros usuarios interesados en comprar/vender libros en "Mensajería con Usuarios" (RFU-06).
+8. Los usuarios pueden participar en una "Red Social para Intercambio de Libros" (RFU-07). Pueden subir publicaciones sobre libros que les gustan o para ofrecer un intercambio. Pueden dar me gusta, comentar y agregar amigos.
+9. Para vender libros, los usuarios pueden utilizar "Publicar Libros en Venta" (RFU-08), donde suben la información de los libros que desean vender.
+10. Los usuarios pueden buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación en "Búsqueda de Libros" (RFCL-01).
+11. Los usuarios pueden navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas en "Exploración de Categorías" (RFCL-02).
+12. Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y ubicación del vendedor en "Detalles del Libro" (RFCL-03).
+13. Los usuarios pueden agregar libros a su lista de deseos en "Lista de Libros Deseados" (RFCL-04).
+14. El sistema procesa pagos de manera segura y confiable durante las compras o intercambios en "Procesamiento de Pagos" (RFSP-01).
+15. Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias en "Gestión de Métodos de Pago o Cobro" (RFSP-02).
+16. Después de realizar una compra o intercambio, los usuarios reciben una confirmación de pago exitoso en "Confirmación de Pagos" (RFSP-03).
+17. El sistema calcula los costos de envío para los compradores en función de la ubicación del vendedor y del comprador en "Cálculo de Costos de Envío" (RFEL-01).
+18. Los usuarios pueden realizar un seguimiento de los envíos en tiempo real para recibir actualizaciones sobre la ubicación y el estado de la entrega en "Seguimiento de Envíos" (RFEL-02).
 
 ### 2.3 Requerimientos de Atributos de Calidad (Escenarios)
 A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
