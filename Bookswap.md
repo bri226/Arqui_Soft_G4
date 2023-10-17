@@ -404,6 +404,23 @@ Asegurar una alta disponibilidad es esencial en la plataforma para garantizar qu
 #### Medida de respuesta esperado 
 - Disponibilidad del sistema: 99.9%
 - Downtime / Año: 8.8h
+  
+#### 4.1.1 Detectar Fallas
+- **Pruebas automatizadas** con Cypress, para verificar que la aplicación este funcionando correctamente en cada despliegue.
+- **Sistema de monitoreo** para identificar potenciales problemas antes de que causen un tiempo de inactividad.
+- **Sistema de notificación de incidentes** que genere alertas de problemas críticos, como caídas de un servicio externo, altas cargas de CPU, etc.
+
+#### 4.1.2 Recuperación de Fallas
+- **Redundancia de servidores**, se implementará un balanceador de carga que redirija el tráfico a servidores alternativos en caso de que un servidor en especifico falle.
+- **Sistema de almacenamiento distribuido**, para garantizar que los datos estén disponiles incluso en caso de fallos de hardware.
+
+#### 4.1.3 Prevención de Fallas
+- **Pruebas de estrés** para identificar posibles cuellos de botella o debilidades en la aplicación.
+- **Implementación de Análisis estático de código** como SonarCloud para detectar code smells, bugs y vulnerabilidades en el workflow CI/CD, y así garantizar buenas practicas de programación.
+  
+#### 4.1.4 Alta Disponibilidad
+- **Implementación de réplicas de la aplicación** y balanceo de carga entre múltiples servidores.
+  
 ### 4.2 Mantenibilidad
 ### 4.3 Interoperabilidad
 La interoperabilidad en BookSwap se plantea como una táctica esencial para mejorar la experiencia del usuario y la eficiencia del sistema. La interoperabilidad se refiere a la capacidad del sistema para interactuar, operar y compartir datos con otros sistemas de forma efectiva y sin problemas. En el contexto de BookSwap, la interoperabilidad se centra en integrar diversas funcionalidades y características que permiten a los usuarios interactuar sin problemas con la plataforma y a la plataforma interactuar eficientemente con otros sistemas externos. A continuación, se presentan las tácticas específicas para garantizar la interoperabilidad en BookSwap:
