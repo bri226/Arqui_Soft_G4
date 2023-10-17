@@ -283,6 +283,16 @@ Se utilizará para almacenar datos menos estructurados, como registros de activi
 ```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
+Se muestra el mapeo de elementos a nivel de despliegue. a arquitectura de la aplicación web es de tres capas y se divide en:
+
+- **Front-end**, es la capa que los usuarios ven y con la que interactúan. Está implementado en React.js. El front-end se ejecuta en el navegador del usuario.
+
+
+- **Back-end** de la aplicación es la capa que proporciona acceso a los datos y funcionalidades de la aplicación. Está implementado en express.js con Javascript como lenguaje de programación. El API se ejecuta en un servidor.
+
+- **Base de datos**  almacena los datos de la aplicación. Está implementada en dos sistemas de gestión de bases de datos: PostgreSQL y MongoDB. La base de datos se ejecuta en un servidor.
+
+<img src="img/diagrama_despliegue.png" width="100%">
 
 ### 3.5. Elección de Tecnología
 Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
