@@ -239,7 +239,7 @@ El modelo de coordinación define cómo los componentes de software se comunican
 * **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
 * **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros. Por último, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios, al igual que la funcionalidad de rasterar al repartidor en tiempo real.
 
-#### 3.3. Modelo de Datos
+### 3.3. Modelo de Datos
 Para el modelo de los datos, se considerarán los siguientes aspectos:
 
 * **Abstracciones**: Se consideraron los siguientes modelos, los cuales son la base de toda la plataforma
