@@ -285,21 +285,90 @@ Se utilizará para almacenar datos menos estructurados, como registros de activi
 ### 3.4. Mapeo entre Elementos de Arquitectura
 
 ### 3.5. Elección de Tecnología
+Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
 
-- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
-  
-- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
+### Tailwind CSS para el Framework de Estilos
 
-- **Bases de Datos:**
-  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
-  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
-  
-- **Servidores y Despliegue:**
-  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
-  
-- **Seguridad:**
-  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
-  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Propuesto |
+| **Contexto** | La necesidad de un enfoque rápido y eficiente para el diseño y estilo del sistema |
+| **Decisión** | Se opta por Tailwind CSS como el framework de estilos debido a su enfoque utility-first que permite un desarrollo más rápido y eficiente del diseño de la interfaz de usuario. |
+| **Consecuencias** | Esto facilita el desarrollo de la interfaz de usuario, permitiendo cambios y personalizaciones rápidas sin necesidad de escribir CSS personalizado, agilizando así el proceso de desarrollo del frontend. |
+
+### Jest para el Framework de Pruebas
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta de pruebas sólida y ampliamente adoptada para garantizar la calidad del código |
+| **Decisión** | Se elige Jest como el framework de pruebas debido a su popularidad, capacidad para pruebas unitarias y de integración, y su integración fácil con proyectos de JavaScript y React. |
+| **Consecuencias** | Jest proporciona un entorno de pruebas robusto, permitiendo una cobertura completa de pruebas para el código frontend y backend del sistema. Facilita la detección temprana de errores y garantiza la calidad del código durante el desarrollo. |
+
+### React para el Framework Frontend
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de un framework frontend moderno, reactivo y eficiente para crear una interfaz de usuario dinámica e interactiva |
+| **Decisión** | Se selecciona React como el framework frontend debido a su flexibilidad, rendimiento y comunidad activa. React permite la creación de componentes reutilizables, facilitando el desarrollo y mantenimiento de una interfaz de usuario compleja. |
+| **Consecuencias** | Esto facilita la creación de interfaces de usuario interactivas y dinámicas, proporcionando una experiencia de usuario mejorada y una arquitectura modular que permite el escalado del sistema. |
+
+### Node.js y Express.js para el Backend
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de un backend flexible y eficiente que pueda manejar una gran cantidad de solicitudes de forma rápida y confiable |
+| **Decisión** | Se elige Node.js junto a Express.js como el framework backend debido a su naturaleza sin bloqueo (non-blocking), lo que permite el manejo eficiente de solicitudes concurrentes y su sintaxis simple y fácil de entender para desarrolladores. |
+| **Consecuencias** | Esto facilita el desarrollo de APIs robustas y escalables, permitiendo una gestión eficiente de las operaciones de backend, así como una fácil integración con bases de datos y otros servicios del sistema. |
+
+
+### PostgreSQL para la Base de Datos Relacional
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una base de datos relacional que pueda manejar de forma segura y eficiente los datos críticos del usuario |
+| **Decisión** | Se selecciona PostgreSQL como la base de datos relacional debido a su robustez, confiabilidad, capacidad de manejar grandes volúmenes de datos y su conformidad con los estándares de SQL. |
+| **Consecuencias** | PostgreSQL proporciona un sistema de gestión de bases de datos confiable y escalable, permitiendo un almacenamiento seguro y eficiente de datos del usuario, asegurando la integridad y consistencia de los datos. |
+
+### MongoDB para la Base de Datos No Relacional
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una base de datos no relacional para datos menos estructurados y flexibles |
+| **Decisión** | Se opta por MongoDB como la base de datos no relacional debido a su naturaleza de documentos JSON flexibles, que permite el almacenamiento de datos no estructurados y semiestructurados de manera eficiente. |
+| **Consecuencias** | MongoDB proporciona un almacenamiento de datos flexible y escalable, permitiendo el manejo de datos variados y cambiantes de forma eficiente, facilitando la adaptación del sistema a las necesidades cambiantes del usuario. |
+
+### Amazon Web Services para el Despliegue
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una infraestructura de alojamiento confiable y escalable para el despliegue del sistema |
+| **Decisión** | Se elige Amazon Web Services (AWS) como la plataforma de despliegue debido a su confiabilidad, escalabilidad, servicios diversos y facilidad de uso para implementaciones de aplicaciones en la nube. |
+| **Consecuencias** | AWS permite un despliegue sencillo y seguro del sistema en la nube, proporcionando flexibilidad para escalar recursos según la demanda del usuario, asegurando así la disponibilidad y rendimiento del sistema. |
+
+### Postman para Herramientas de Pruebas API
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta para probar y validar las APIs de forma eficiente |
+| **Decisión** | Se selecciona Postman como la herramienta para pruebas de APIs debido a su interfaz intuitiva, capacidad para enviar solicitudes HTTP y verificar respuestas fácilmente, y su capacidad para automatizar pruebas de API complejas. |
+| **Consecuencias** | Postman simplifica el proceso de pruebas de API, permitiendo una validación rápida y precisa de las funciones del sistema, facilitando así la detección temprana de errores y su corrección eficiente. |
+
+### Jira para Herramientas de Colaboración
+
+| Título | Contenido |
+|-------|---------|
+| **Estado** | Aceptado |
+| **Contexto** | La necesidad de una herramienta de colaboración y gestión de proyectos eficiente y versátil |
+| **Decisión** | Se opta por Jira como la herramienta de colaboración debido a su amplia gama de funcionalidades para la gestión de proyectos, seguimiento de problemas, planificación ágil y colaboración en equipo. |
+| **Consecuencias** | Jira facilita la colaboración y la gestión del proyecto, permitiendo un seguimiento detallado del progreso, una asignación efectiva de tareas, la gestión eficiente de problemas y una comunicación fluida entre los miembros del equipo, asegurando así un desarrollo coordinado y eficaz del sistema. |
+
 ## 4. TÁCTICAS
 
 ### 4.1 Disponibilidad
