@@ -239,23 +239,10 @@ En la siguiente tabla se especifican a qué requerimientos funcionales estan rel
 | ESC-10     | RFEL-01, RFEL-02, RFEL-03, RFEL-04     |
 
 ### 2.4 Restricciones
-**Tecnologías Utilizadas:**
 
-- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
-  
-- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
-
-- **Bases de Datos:**
-  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
-  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
-  
-- **Servidores y Despliegue:**
-  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
-  
-- **Seguridad:**
-  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
-  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
-  
+* **Plazo de Entrega**: El proyecto debe estar desarrollado, probado y lanzado antes de la quincena de diciembre. Esta restricción impone una fecha límite estricta para todas las etapas del proyecto.
+* **Conocimiento Técnico**: No todos los integrantes del equipo tienen experiencia con todas las tecnologías detalladas para el proyecto. Por lo tanto, se utilizarán alternativas más sencillas para las demostraciones del sistema, priorizando la familiaridad y accesibilidad del equipo con las herramientas seleccionadas.
+* **Herramientas open-source**: Se dará preferencia a herramientas y tecnologías de código abierto para minimizar los costos de licencias. Esto incluirá sistemas operativos, bases de datos, frameworks y otras herramientas necesarias para el desarrollo y operación del proyecto.
 
 ## 3. Decisiones a nivel de arquitectura
 
@@ -277,10 +264,56 @@ El modelo de coordinación define cómo los componentes de software se comunican
 * **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
 
 ### 3.3. Modelo de Datos
+La plataforma web permite a los usuarios comprar y vender libros de segunda mano. Los usuarios pueden registrarse en la plataforma y crear cuentas. Una vez que los usuarios tienen una cuenta, pueden buscar libros, agregar libros a su carrito de compras y realizar pagos.
+
+#### Base de Datos Relacional
+- **Usuario**: Esta tabla almacena información sobre los usuarios de la plataforma. Los campos incluyen el nombre, el correo electrónico, la contraseña, el estado y la dirección.
+- **Dirección**: Esta tabla almacena información sobre las direcciones que puede tener un usuario. Puede tener ninguna o varias y tiene campos como calle, número, ciudad y región.
+- **Historial de Órdenes**: Esta tabla almacena información sobre el seguimiento de una orden. Un id de historial solo puede tener a una orden, pero una orden puede estar en varios id de historial. En ese sentido, cada vez que el estado de la orden cambie durante el seguimiento, se generará un nuevo registro con el mismo id de la orden y un nuevo estado.
+- **Libro**: Esta tabla almacena información sobre los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el título, el autor, la editorial, el ISBN, el número de páginas, la fecha de publicación, el idioma y el estado.
+- **Orden**: Esta tabla almacena información sobre las órdenes realizadas en la plataforma. Los campos incluyen la fecha de la orden, el precio total, el método de pago y el estado de la orden.
+- **Método de pago**: Esta tabla almacena información sobre los métodos de pago aceptados por la plataforma. Los campos incluyen el nombre del método de pago y el tipo de método de pago.
+- **Categoría**: Esta tabla almacena información sobre las categorías de libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre de la categoría y el tipo de categoría.
+- **Editorial**: Esta tabla almacena información sobre las editoriales de los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre de la editorial y el país de origen.
+- **Autor**: Esta tabla almacena información sobre los autores de los libros que se ofrecen a la venta en la plataforma. Los campos incluyen el nombre del autor y el país de origen.
+
+<img src="img/modelo_bd.jpg" width="100%"/>
+
+#### Base de Datos No Relacional
+
+Se utilizará para almacenar datos menos estructurados, como registros de actividad. La flexibilidad de una base de datos no relacional en términos de esquema permite adaptarse fácilmente a los cambios y almacenar información variada en un mismo documento.
+
+```
+  actividad_usuario: {
+      "_id": ObjectId("5f8742c37b6d4b548352d8a0"),
+      "usuario_id": "user123",
+      "tipo_actividad": "login",
+      "timestamp": ISODate("2023-01-15T12:30:00Z"),
+      "detalles": {
+        "direccion_ip": "192.168.1.1",
+        "navegador": "Chrome"
+      }
+  }
+```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
 
 ### 3.5. Elección de Tecnología
+
+- **Frontend:** Utilizaremos **React** para el desarrollo del frontend, permitiendo una experiencia de usuario dinámica e interactiva.
+  
+- **Backend:** Implementaremos el backend utilizando **Node.js** y **Express.js** para la construcción de APIs robustas y eficientes.
+
+- **Bases de Datos:**
+  - **Base de Datos Relacional:** Emplearemos **PostgreSQL** como nuestra base de datos relacional para almacenar datos críticos del usuario y resultados de competencias. PostgreSQL ofrece un sólido sistema de gestión de bases de datos relacional.
+  - **Base de Datos No Relacional:** Utilizaremos **MongoDB** como nuestra base de datos no relacional para almacenar datos menos estructurados, como registros de actividad y datos flexibles relacionados con el usuario.
+  
+- **Servidores y Despliegue:**
+  - Desplegaremos nuestras aplicaciones en **servidores propios** utilizando servicios de **Amazon Web Services (AWS)**, **Heroku** y pruebas gratuitas de **Atlas** para MongoDB. Esto proporcionará flexibilidad y control sobre nuestra infraestructura.
+  
+- **Seguridad:**
+  - **Token de Seguridad:** Implementaremos **tokens de seguridad** para validar las APIs, lo que garantizará la autenticación segura y el acceso controlado a los recursos del servidor.
+  - **Contraseñas Encriptadas:** Las contraseñas de los usuarios se enviarán y se almacenarán en la base de datos de forma **encriptada** para mantener la seguridad y la privacidad de los datos.
 ## 4. TÁCTICAS
 
 ### 4.1 Disponibilidad
@@ -289,11 +322,41 @@ Asegurar una alta disponibilidad es esencial en la plataforma para garantizar qu
 #### Medida de respuesta esperado 
 - Disponibilidad del sistema: 99.9%
 - Downtime / Año: 8.8h
+
 ### 4.2 Mantenibilidad
+Las plataformas dedicadas al comercio están sujetas a cambios frecuentes, como añadir nuevas funciones o características para satisfacer las necesidades de los usuarios, corregir errores o problemas, o adaptarse a los cambios en la legislación. Algunas tácticas elegidas para cumplir este atributo de calidad son:
+
+- **Reducir el tamaño de un módulo**: Se está dividiendo el sistema en módulos funcionales, para gestionar adecuadamente las actividades como compra, búsqueda, funciones de usuario.
+
+- **Incrementar cohesión**: Se están implementando módulos distintos de acuerdo con la funcionalidad, para que haya una alta cohesión.
+
+- **Disminuir acoplamiento**: Se está tercerizando el servicio de pago mediante Niubiz.
+
 ### 4.3 Interoperabilidad
 ### 4.4 Rendimiento
+
 ### 4.5 Seguridad
+La seguridad es indispensable ya que la plataforma debe proteger la información personal de los usuarios como sus nombres, números de tarjeta de crédito, debe cumplir la protección de datos personales y la protección de las transacciones, ya que los usuarios podrían ser víctimas de fraude o estafa.
+
+- **Detectar ataques**: 
+  - **Detectar intrusos**: Mediante un Sistema de Identificación de Intrusos (IDS), como Snort, un sistema open source basado en red.
+  - **Detectar DDoS**: Limitar la cantidad de conexiones por minuto que puede hacer un atacante al servidor.
+
+- **Resistir ataques**: 
+  - **Identificar atacantes**: Las direcciones IP que sean detectadas como posibles atacantes serán bloqueadas.
+  - **Autenticar a los usuarios** con autenticación de dos factores (2FA).
+  - **Limitar el acceso a solo la parte del sistema involucrada**, como los usuarios autenticados.
+
+- **Reaccionar a ataques**:
+  - Se implementará un sistema de notificación de incidentes, tanto a los usuarios, como al personal de seguridad.
+  - Se bloqueará la cuenta con cinco intentos de inicio de sesión inválidos.
+
+- **Recuperarse de ataques**
+  - Realizar copias de seguridad periódicas de datos críticos y sistemas para facilitar la restauración en caso de un ataque exitoso.
+
 ## 5. Anexo: Tópicos en Arquitectura de Software
+
+
 ## 6. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
