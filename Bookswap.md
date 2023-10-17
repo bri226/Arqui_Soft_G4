@@ -462,9 +462,10 @@ La seguridad es indispensable ya que la plataforma debe proteger la información
   - Realizar copias de seguridad periódicas de datos críticos y sistemas para facilitar la restauración en caso de un ataque exitoso.
 
 ## 5. Anexo: Tópicos en Arquitectura de Software
+## 6. Diagrama de Arquitectura
+<img src="img/DiagramaArq.png" width="100%"/>
 
-
-## 6. REFERENCIAS
+## 7. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
 
 Buscalibre (s.f.) Términos y condiciones Venta de Libros Usados. https://www.buscalibre.pe/terminos-y-condiciones-venta-usados-cl_st.html
