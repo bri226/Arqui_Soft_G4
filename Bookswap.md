@@ -187,7 +187,7 @@ Los stakeholders seleccionados para este trabajo son:
 ### 2.3 Requerimientos de Atributos de Calidad (Escenarios)
 A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
 
-|Atributo|Código|Entorno|Fuente|Estímulo|Artefacto|Resouesta|Medida de Respuesta
+|Atributo|Código|Entorno|Fuente|Estímulo|Artefacto|Respuesta|Medida de Respuesta
 |-------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 |Escalabilidad|ESC-01|Red Social|Usuario|Miles de publicaciones en un periodo corto | Infraestrucutra de servidores|Activación de servidores extras|El servidor se activa de 30 segundos
 | Escalabilidad | ESC-02 | Plataforma de Bookswap | Usuario | Aumento rápido de usuarios y transacciones | Infraestructura del servidor | Escalamiento automático de recursos computacionales | El tiempo de respuesta se mantiene constante incluso con el aumento del tráfico. |
