@@ -301,6 +301,16 @@ El modelo de coordinación define cómo los componentes de software se comunican
 ### 3.4. Mapeo entre Elementos de Arquitectura
 
 ### 3.5. Elección de Tecnología
+Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
+- **Framework de Estilos**: Tailwind CSS
+- **Framework para Pruebas**: Jest
+- **Framework Frontend**: React
+- **Backend**: Node.js + Express.js (con las librerías Sequelize y Mongoose para manejo de bases de datos relacional y no relacional, respectivamente)
+- **Base de Datos Relacional**: PostgreSQL
+- **Base de Datos No Relacional**: MongoDB
+- **Servicio de Despliegue**: Amazon Web Services (AWS)
+- **Herramienta de Pruebas API**: Postman
+- **Herramienta de Colaboración**: Jira
 ## 4. TÁCTICAS
 
 ### 4.1 Disponibilidad
