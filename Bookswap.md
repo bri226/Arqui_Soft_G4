@@ -1,37 +1,5 @@
 # CASO DE NEGOCIO
 
-## LISTA DE PENDIENTES
-
-- [ ] Crear los mockups de la plataforma web
-- [ ] Definir cuáles serán los módulos
-- [ ] <b>Estructura</b>
-    - [ ] <b>Caso de Negocio</b>
-        - [ ] Generalidades :  Bri
-        - [ ] Modelo de Negocio : Bri
-        - [ ] Estructura del equipo
-        - [ ] Listado de Stakeholders
-    - [ ] <b>Requerimientos del Sistema</b> (deben ser por módulo, si hay req. transversales, definirlos tmbn) 
-        - [ ] <b>Requerimientos Funcionales</b>: Acotar o ampliar funcionalidad de soluciones tradicionales. Respaldados por mockups o prototipos.
-        - [ ] <b>Requerimientos de Atributos de Calidad (Escenarios)</b>: Además de su relación con los req. de sistema.
-        - [ ] <b>Restricciones</b>: Factores sobre los que no hay influencia directa.
-    - [ ] <b>Decisiones a nivel de arquitectura</b>: Usar categorías vistas en el curso.
-        - [ ] <b>Asignación de Responsabilidades</b> 
-        - [ ] <b>Modelo de Coordinación</b>
-        - [ ] <b>Modelo de Datos</b>
-        - [ ] <b>Mapeo entre Elementos de Arquitectura</b>
-        - [ ] <b>Elección de Tecnología</b>
-    - [ ] <b>Tácticas </b>: A nivel de disponibilidad, mantenibilidad, interoperabilidad, rendimiento, seguridad
-    - [ ] <b>Tópicos en Arquitectura de SW (Cada uno) </b>: Se coloca como anexo. Se elabora un video explicativo y mostrando código de demo.
-        - [ ] Desarrollo conceptual
-        - [ ] Consideraciones técnicas: instalación y configuración
-            - [ ] Instalación / Configuración de Servicio
-            - [ ] Primeros pasos
-        - [ ] <b>Demo</b>
-            - [ ] Escenario práctico
-            - [ ] Pasos para la demo
-
-
-
 ## 1. Bookswap
 
 ### a. Generalidades
