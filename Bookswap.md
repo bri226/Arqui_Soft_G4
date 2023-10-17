@@ -248,7 +248,6 @@ Para el modelo de los datos, se considerarán los siguientes aspectos:
   * *Pedido*: Datos de los pedidos relacionados
   * *Transacción*: Datos de las transaccioens realizadas para los pedidos
   * *Chat*: Datos de los mensajes de los chats entre usuarios 
-  * *Delivery*: Datos de geolocalización de un repartidor
 * **Base de datos SQL**: Se utilizará una base de datos PostgreSQL para almacenar los datos de los usuarios, libros, pedidos, y transacciones
 * **Base de datos NoSQL**: Se utilizará una base de datos MongoDB para almacenar la información sobre los chats entre usuarios y la geolocalización del repartidor en los deliveries.
 La plataforma web permite a los usuarios comprar y vender libros de segunda mano. Los usuarios pueden registrarse en la plataforma y crear cuentas. Una vez que los usuarios tienen una cuenta, pueden buscar libros, agregar libros a su carrito de compras y realizar pagos.
