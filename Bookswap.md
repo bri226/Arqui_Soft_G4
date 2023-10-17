@@ -208,6 +208,26 @@ Los stakeholders seleccionados para este trabajo son:
 
 
 ### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
+
+1. Los usuarios acceden a la página de inicio de BookSwap.
+2. Los nuevos usuarios hacen clic en "Registro de Usuario" (RFU-01) y proporcionan su nombre, dirección de correo electrónico y contraseña.
+3. Después de completar el registro, se envía un correo de confirmación (RFU-02) para verificar la dirección de correo electrónico.
+4. Los usuarios registrados pueden iniciar sesión utilizando su correo electrónico y contraseña en "Inicio de Sesión" (RFU-03). En caso de ingreso erróneo de credenciales, se muestra un mensaje de error (RFU-03.1).
+5. Los usuarios pueden editar su perfil, incluyendo información personal como nombre, dirección, contraseña y foto de perfil en "Gestión de Perfil" (RFU-04).
+6. Los usuarios pueden ver y editar su historial de intercambio de libros en "Gestión de Historial" (RFU-05).
+7. Los usuarios pueden enviar mensajes privados a otros usuarios interesados en comprar/vender libros en "Mensajería con Usuarios" (RFU-06).
+8. Los usuarios pueden participar en una "Red Social para Intercambio de Libros" (RFU-07). Pueden subir publicaciones sobre libros que les gustan o para ofrecer un intercambio. Pueden dar me gusta, comentar y agregar amigos.
+9. Para vender libros, los usuarios pueden utilizar "Publicar Libros en Venta" (RFU-08), donde suben la información de los libros que desean vender.
+10. Los usuarios pueden buscar libros en la plataforma utilizando filtros como título, autor, género y ubicación en "Búsqueda de Libros" (RFCL-01).
+11. Los usuarios pueden navegar y explorar diferentes categorías de libros para descubrir nuevas lecturas en "Exploración de Categorías" (RFCL-02).
+12. Los usuarios pueden ver información detallada sobre un libro, incluyendo su descripción, precio, estado y ubicación del vendedor en "Detalles del Libro" (RFCL-03).
+13. Los usuarios pueden agregar libros a su lista de deseos en "Lista de Libros Deseados" (RFCL-04).
+14. El sistema procesa pagos de manera segura y confiable durante las compras o intercambios en "Procesamiento de Pagos" (RFSP-01).
+15. Los usuarios pueden agregar, editar o eliminar métodos de pago o cobro, como tarjetas de crédito o cuentas bancarias en "Gestión de Métodos de Pago o Cobro" (RFSP-02).
+16. Después de realizar una compra o intercambio, los usuarios reciben una confirmación de pago exitoso en "Confirmación de Pagos" (RFSP-03).
+17. El sistema calcula los costos de envío para los compradores en función de la ubicación del vendedor y del comprador en "Cálculo de Costos de Envío" (RFEL-01).
+18. Los usuarios pueden realizar un seguimiento de los envíos en tiempo real para recibir actualizaciones sobre la ubicación y el estado de la entrega en "Seguimiento de Envíos" (RFEL-02).
+
 ### 2.3 Requerimientos de Atributos de Calidad (Escenarios)
 A continuación, se presenta una tabla que resume los atributos de calidad, sus descripciones y los escenarios asociados:
 
@@ -260,10 +280,21 @@ La plataforma de compra y venta de libros de segunda mano estará compuesto de e
 El modelo de coordinación define cómo los componentes de software se comunican entre sí. Estos componentos pueden ser internos la sistema o pueden ser servicios externos. Para el contexto de esta plataforma web de compra y venta de libros de segunda mano, se han considerado tecnologías síncronas, asíncronas y stateful.
 
 * **Stateful**: Para la funcionalidad de carrito de compras, se debe poder guardar el estado de los productos dentro de este entre sesiones de un usuario
-* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios. Por último, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
-* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros.
+* **Síncrona**: La comunicación síncrona se debe dar al momento de crear y autenticar usuarios. A su vez, la integración con pasarelas de pago se efectuará con este tipo de comunicación a la hora de elegir el método de pago.
+* **Asíncrona**: Se usará el framework de Javascript React para manejar peticiones asíncornas. Estas se utilizarán para hacer consultas eficientemente a la base de datos y brindar información y catalogo de libros. Por último, se utilizará WebSocket para la funcionalidad de chat en tiempo real entre usuarios, al igual que la funcionalidad de rasterar al repartidor en tiempo real.
 
-### 3.3. Modelo de Datos
+#### 3.3. Modelo de Datos
+Para el modelo de los datos, se considerarán los siguientes aspectos:
+
+* **Abstracciones**: Se consideraron los siguientes modelos, los cuales son la base de toda la plataforma
+  * *Usuario*: Datos del usuario y de la persona
+  * *Libro*: Datos de los libros disponibles en la plataforma
+  * *Pedido*: Datos de los pedidos relacionados
+  * *Transacción*: Datos de las transaccioens realizadas para los pedidos
+  * *Chat*: Datos de los mensajes de los chats entre usuarios 
+  * *Delivery*: Datos de geolocalización de un repartidor
+* **Base de datos SQL**: Se utilizará una base de datos PostgreSQL para almacenar los datos de los usuarios, libros, pedidos, y transacciones
+* **Base de datos NoSQL**: Se utilizará una base de datos MongoDB para almacenar la información sobre los chats entre usuarios y la geolocalización del repartidor en los deliveries.
 La plataforma web permite a los usuarios comprar y vender libros de segunda mano. Los usuarios pueden registrarse en la plataforma y crear cuentas. Una vez que los usuarios tienen una cuenta, pueden buscar libros, agregar libros a su carrito de compras y realizar pagos.
 
 #### Base de Datos Relacional
@@ -322,7 +353,23 @@ Asegurar una alta disponibilidad es esencial en la plataforma para garantizar qu
 #### Medida de respuesta esperado 
 - Disponibilidad del sistema: 99.9%
 - Downtime / Año: 8.8h
+  
+#### 4.1.1 Detectar Fallas
+- **Pruebas automatizadas** con Cypress, para verificar que la aplicación este funcionando correctamente en cada despliegue.
+- **Sistema de monitoreo** para identificar potenciales problemas antes de que causen un tiempo de inactividad.
+- **Sistema de notificación de incidentes** que genere alertas de problemas críticos, como caídas de un servicio externo, altas cargas de CPU, etc.
 
+#### 4.1.2 Recuperación de Fallas
+- **Redundancia de servidores**, se implementará un balanceador de carga que redirija el tráfico a servidores alternativos en caso de que un servidor en especifico falle.
+- **Sistema de almacenamiento distribuido**, para garantizar que los datos estén disponiles incluso en caso de fallos de hardware.
+
+#### 4.1.3 Prevención de Fallas
+- **Pruebas de estrés** para identificar posibles cuellos de botella o debilidades en la aplicación.
+- **Implementación de Análisis estático de código** como SonarCloud para detectar code smells, bugs y vulnerabilidades en el workflow CI/CD, y así garantizar buenas practicas de programación.
+  
+#### 4.1.4 Alta Disponibilidad
+- **Implementación de réplicas de la aplicación** y balanceo de carga entre múltiples servidores.
+  
 ### 4.2 Mantenibilidad
 Las plataformas dedicadas al comercio están sujetas a cambios frecuentes, como añadir nuevas funciones o características para satisfacer las necesidades de los usuarios, corregir errores o problemas, o adaptarse a los cambios en la legislación. Algunas tácticas elegidas para cumplir este atributo de calidad son:
 
@@ -335,7 +382,41 @@ Las plataformas dedicadas al comercio están sujetas a cambios frecuentes, como 
 <img src="img/mantenibilidad.jpg" width="80%"/>
 
 ### 4.3 Interoperabilidad
+La interoperabilidad en BookSwap se plantea como una táctica esencial para mejorar la experiencia del usuario y la eficiencia del sistema. La interoperabilidad se refiere a la capacidad del sistema para interactuar, operar y compartir datos con otros sistemas de forma efectiva y sin problemas. En el contexto de BookSwap, la interoperabilidad se centra en integrar diversas funcionalidades y características que permiten a los usuarios interactuar sin problemas con la plataforma y a la plataforma interactuar eficientemente con otros sistemas externos. A continuación, se presentan las tácticas específicas para garantizar la interoperabilidad en BookSwap:
+**Contexto:**
+BookSwap busca expandir su funcionalidad y biblioteca de contenido mediante la colaboración con sistemas de pago externos y proveedores de contenido. Integrar estos sistemas externos es esencial para ofrecer a los usuarios una experiencia completa y variada en la plataforma.
+
+**Decisiones:**
+
+1. **Integración con Plataformas de Pago:**
+   - Implementar Interfaces Seguras: Desarrollaremos interfaces seguras y cifradas para la integración con sistemas de pago externos. Esto garantizará la seguridad de las transacciones financieras y protegerá la información financiera de los usuarios.
+   - Facilitar Transacciones y Suscripciones: La integración permitirá a los usuarios realizar transacciones financieras sin problemas, incluyendo la compra de libros y la suscripción a servicios premium. Se establecerán procesos claros y fáciles de seguir para garantizar una experiencia de usuario fluida.
+
+2. **Conexión con Proveedores de Contenido:**
+   - Establecer Conexiones Confiables: Estableceremos conexiones confiables y seguras con proveedores de contenido externos. Esto implicará la implementación de protocolos estándar de la industria para la transmisión segura de datos.
+   - Ampliar la Biblioteca de BookSwap: Al conectar con varios proveedores de contenido, BookSwap podrá expandir su biblioteca con una amplia variedad de obras y libros. Esto incluirá no solo libros populares, sino también obras de autores independientes y títulos especializados.
+
+**Consecuencias:**
+
+- Transacciones Seguras: Los usuarios podrán realizar transacciones financieras con confianza, sabiendo que sus datos están protegidos.
+- Variedad de Contenido: La integración con proveedores externos permitirá a los usuarios acceder a una gran diversidad de obras, desde bestsellers hasta títulos menos conocidos pero igualmente valiosos.
+- Atracción de Usuarios: La oferta de una biblioteca amplia y diversa atraerá a más usuarios a la plataforma, lo que puede resultar en un aumento en la retención y la participación.
+- Ingresos Incrementados: Al facilitar transacciones y suscripciones, BookSwap puede generar ingresos a través de ventas y suscripciones, contribuyendo así a la sostenibilidad financiera de la plataforma.
+
 ### 4.4 Rendimiento
+El rendimiento toma importancia en la plataforma ya que diferentes modulos dependen de esta para asegurar la experiencia del usuario. Entre estos módulos, se encuentra el módulo de chat entre usuarios, para poder recibir y enviar mensajes de manera rápida, el módulo de libros, para hacer búsquedas filtradas en la basededatos y recibir estos resultados a una velocidad aceptable
+
+#### Medida de respuesta esperado 
+- Tiempo de carga promedio: 2s
+- Tiempo de respuesta promedio de Apis: 300ms
+
+#### Tácticas
+- **Controlar la demanda de recursos**: 
+  - **Eficencia en el uso de recursos**: Tener revisiones periódicas del código para identificar funciones ineficientes o antipatrones. Identificación de code smells
+  - **Limitar solicitudes**: Limitar la cantidad de solicitudes que se pueda admitir a determinadas APIs en un determinado periodo de tiempo para estabilizar la carga utilizando rate limiting.
+- **Gestionar recursos**: 
+  - **Incrementar recursos**: Si es que la plataforma y a su vez la demanda crece, se aumentará la capacidad de los recursos o vertical o horizontalmente.
+  - **Concurrencia**: Aplicar técnicas de procesamiento en paralelo. Se puede complementar con la introducción de más recursos, incluído un load balancer.
 
 ### 4.5 Seguridad
 La seguridad es indispensable ya que la plataforma debe proteger la información personal de los usuarios como sus nombres, números de tarjeta de crédito, debe cumplir la protección de datos personales y la protección de las transacciones, ya que los usuarios podrían ser víctimas de fraude o estafa.
