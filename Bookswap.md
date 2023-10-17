@@ -163,18 +163,6 @@ Los stakeholders seleccionados para este trabajo son:
 
 <img src="img/modulos.jpg" width="60%"/>
 
-
-### 2.2. Requerimiento de atributos de calidad (Escenarios)
-
-(RFEL-01) Cálculo de Costos de Envío: El sistema debe calcular los costos de envío para los compradores en función de la ubicación del vendedor y el comprador.
-
-(RFEL-02) Seguimiento de Envíos: Los usuarios deben poder realizar un seguimiento de los envíos en tiempo real y recibir actualizaciones sobre la ubicación y el estado de la entrega.
-
-(RFEL-03) Opciones de Envío: Los vendedores pueden ofrecer diferentes opciones de envío, como envío estándar o express, para que los compradores elijan.
-
-(RFEL-04) Gestión de Devoluciones: Los usuarios deben poder solicitar devoluciones y gestionar el proceso de devolución de libros si el producto no cumple con las expectativas.
-
-
 ### 2.2 Flujo de Interacción de la Plataforma BookSwap: (Flujo Principal)
 
 1. Los usuarios acceden a la página de inicio de BookSwap.
