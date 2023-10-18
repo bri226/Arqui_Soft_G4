@@ -1,0 +1,32 @@
+[2023-10-18T16:22:24.190+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: booking_ingestion.transform_data scheduled__2023-10-18T15:20:07.679090+00:00 [queued]>
+[2023-10-18T16:22:24.207+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: booking_ingestion.transform_data scheduled__2023-10-18T15:20:07.679090+00:00 [queued]>
+[2023-10-18T16:22:24.207+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-10-18T16:22:24.244+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): transform_data> on 2023-10-18 15:20:07.679090+00:00
+[2023-10-18T16:22:24.248+0000] {standard_task_runner.py:57} INFO - Started process 197 to run task
+[2023-10-18T16:22:24.251+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'booking_ingestion', 'transform_data', 'scheduled__2023-10-18T15:20:07.679090+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/booking_ingestion.py', '--cfg-path', '/tmp/tmpegpdxw1f']
+[2023-10-18T16:22:24.252+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask transform_data
+[2023-10-18T16:22:24.330+0000] {task_command.py:415} INFO - Running <TaskInstance: booking_ingestion.transform_data scheduled__2023-10-18T15:20:07.679090+00:00 [running]> on host 55027e8c738b
+[2023-10-18T16:22:24.734+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='booking_ingestion' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-18T15:20:07.679090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-18T15:20:07.679090+00:00'
+[2023-10-18T16:22:24.738+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/booking_ingestion.py", line 26, in transform_data
+    booking = pd.read_csv(f"{dag_path}/raw_data/booking.csv", low_memory=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/raw_data/booking.csv'
+[2023-10-18T16:22:24.754+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=booking_ingestion, task_id=transform_data, execution_date=20231018T152007, start_date=20231018T162224, end_date=20231018T162224
+[2023-10-18T16:22:24.792+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 10 for task transform_data ([Errno 2] No such file or directory: '/opt/airflow/raw_data/booking.csv'; 197)
+[2023-10-18T16:22:24.825+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-10-18T16:22:24.852+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
