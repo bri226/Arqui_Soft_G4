@@ -29,7 +29,7 @@ Normalmente, los *pipelines* se utilizan para:
 - copia de tablas de una base de datos a otra.
 
 
-<img src="../img/pipeline.jpg" width="80%"/>
+<img src="./img/pipeline.jpg" width="80%"/>
 
 ### 1.4. Apache Airflow
 
@@ -98,7 +98,7 @@ Los pasos para crear un proyecto son:
 
     La consola mostrará lo siguiente:
 
-    <img src="../img/construccion_imagen.png" width="100%"/>
+    <img src="./img/construccion_imagen.png" width="100%"/>
 
 
     2.3. Crear el archivo docker-compose.yaml
@@ -129,16 +129,16 @@ Los pasos para crear un proyecto son:
 
     Se generará un árbol de archivos con la siguiente estructura:
 
-    <img src="../img/arbol-airflow.png" width="40%"/>
+    <img src="./img/arbol-airflow.png" width="40%"/>
 
 
     2.5. En  Docker Desktop, ir al contenedor en ejecución y ejecutar el contenedor en el navegador (http://localhost:8080⁠)
 
-    <img src="../img/login-airflow.png" width="100%"/>
+    <img src="./img/login-airflow.png" width="100%"/>
 
     El usuario es **admin** y la contraseña se encuentra en el archivo standalone_admin_password.txt. Se muestra a continuación la interfaz de Airflow.
 
-    <img src="../img/interfaz-airflow.png" width="100%"/>
+    <img src="./img/interfaz-airflow.png" width="100%"/>
 
 
 ### 2.2. Primeros pasos
@@ -178,17 +178,17 @@ docker-compose restart
 
 En el localhost:8080, se mostrará el dag en la lista de dags:
 
-<img src="../img/primer_dag.png" width="100%"/>
+<img src="./img/primer_dag.png" width="100%"/>
 
 Para ejecutarlo, se enciende el dag en el botón que se encuentra a la izquierda del nombre del dag, y se da click en Play en la sección de *Actions*.
 
 Para ver la ejecución, hacemos clic en el nombre del dag, y nos vamos a la sección Graph.
 
-<img src="../img/ejecucion_dag.png" width="100%"/>
+<img src="./img/ejecucion_dag.png" width="100%"/>
 
 Gráficamente, se observa que el flujo se compone de tres grafos. Ahora, este no es un proceso de ETL, es un flujo de prueba. La ejecución en este caso fue exitosa. Para ver los resultados de cada grafo, hacemos clic en cada uno y revisamos los logs. El tercer grafo, el cual se encarga de jalar citas de una API e imprimir una aleatoriamente, muestra en los logs una cita random, ya que todo se ejecutó correctamente.
 
-<img src="../img/task_prueba_log.png" width="100%"/>
+<img src="./img/task_prueba_log.png" width="100%"/>
 
 
 ## 3. Demo
@@ -335,7 +335,7 @@ task_1 >> task_2
 
 Lo ejecutamos desde la interfaz de Apache Airflow:
 
-<img src="../img/dag_demo.png" width="100%"/>
+<img src="./img/dag_demo.png" width="100%"/>
 
 Ocurrieron unas ejecuciones con error debido a que, como la data se va a almacenar en una instancia de SQLite, debería haber persistencia de datos y eso se configura en el docker-compose.yaml, agregando esta línea: 
 ```
@@ -359,19 +359,19 @@ services:
 
 Estos son los resultados del despliegue:
 
-<img src="../img/dag_demo_resultados.png" width="100%"/>
+<img src="./img/dag_demo_resultados.png" width="100%"/>
 
 Se muestran los resultados del cruce de tablas en SQLite, usando DBeaver:
 
-<img src="../img/resultados_sqlite.png" width="100%"/>
+<img src="./img/resultados_sqlite.png" width="100%"/>
 
 <br>
 El flujo puede ser escalable, por ejemplo, descargar y subir información a instancias de base de datos en Amazon o en Microsoft Azure o Google Cloud Platform. Esto se puede configurar en la pestaña de Admin > Connections.
 <br>
 
-<img src="../img/connections.png" width="80%"/>
+<img src="./img/connections.png" width="80%"/>
 
 Y se puede crear una conexión con cualquiera de las fuentes listadas:
 <br>
 
-<img src="../img/aws_connection.png" width="80%"/>
+<img src="./img/aws_connection.png" width="80%"/>
