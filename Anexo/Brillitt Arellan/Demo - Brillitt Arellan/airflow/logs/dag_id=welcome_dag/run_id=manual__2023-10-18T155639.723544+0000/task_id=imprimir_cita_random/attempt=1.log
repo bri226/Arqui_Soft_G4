@@ -1,0 +1,14 @@
+[2023-10-18T15:56:49.716+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.imprimir_cita_random manual__2023-10-18T15:56:39.723544+00:00 [queued]>
+[2023-10-18T15:56:49.759+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.imprimir_cita_random manual__2023-10-18T15:56:39.723544+00:00 [queued]>
+[2023-10-18T15:56:49.759+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-10-18T15:56:49.866+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): imprimir_cita_random> on 2023-10-18 15:56:39.723544+00:00
+[2023-10-18T15:56:49.870+0000] {standard_task_runner.py:57} INFO - Started process 114 to run task
+[2023-10-18T15:56:49.873+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'imprimir_cita_random', 'manual__2023-10-18T15:56:39.723544+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/welcome.py', '--cfg-path', '/tmp/tmpibqsd3fv']
+[2023-10-18T15:56:49.875+0000] {standard_task_runner.py:85} INFO - Job 9: Subtask imprimir_cita_random
+[2023-10-18T15:56:50.011+0000] {task_command.py:415} INFO - Running <TaskInstance: welcome_dag.imprimir_cita_random manual__2023-10-18T15:56:39.723544+00:00 [running]> on host 55027e8c738b
+[2023-10-18T15:56:50.527+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='imprimir_cita_random' AIRFLOW_CTX_EXECUTION_DATE='2023-10-18T15:56:39.723544+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-18T15:56:39.723544+00:00'
+[2023-10-18T15:56:51.047+0000] {logging_mixin.py:151} INFO - Cita del día: "We cannot solve our problems with the same thinking we used when we created them."
+[2023-10-18T15:56:51.049+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-18T15:56:51.066+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=imprimir_cita_random, execution_date=20231018T155639, start_date=20231018T155649, end_date=20231018T155651
+[2023-10-18T15:56:51.131+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-18T15:56:51.159+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
