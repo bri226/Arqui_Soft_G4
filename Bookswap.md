@@ -318,16 +318,16 @@ Se utilizará para almacenar datos menos estructurados, como registros de activi
 ```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
-Se muestra el mapeo de elementos a nivel de despliegue. a arquitectura de la aplicación web es de tres capas y se divide en:
+Se muestra el mapeo de elementos a 3 niveles.
 
-- **Front-end**, es la capa que los usuarios ven y con la que interactúan. Está implementado en React.js. El front-end se ejecuta en el navegador del usuario.
+En el nivel 1 se muestra como el Usuario se comunica con el sistema Bookswap, y como este se comunica con sistemas externos.
+<img src="img/n1-sistemas.jpeg" width="100%">
 
+En el nivel 2 se muestra a nivel de contenedores, donde se ve a detalle la comunicación interna que realiza el sistema Bookswap.
+<img src="img/n2-contenedores.jpeg" width="100%">
 
-- **Back-end** de la aplicación es la capa que proporciona acceso a los datos y funcionalidades de la aplicación. Está implementado en express.js con Javascript como lenguaje de programación. El API se ejecuta en un servidor.
-
-- **Base de datos**  almacena los datos de la aplicación. Está implementada en dos sistemas de gestión de bases de datos: PostgreSQL y MongoDB. La base de datos se ejecuta en un servidor.
-
-<img src="img/diagrama_despliegue.png" width="100%">
+En el nivel 3 se puede ver los módulos con el que cuenta la aplicación y la comunicación que tienen con los sistemas y componentes externos.
+<img src="img/n3-componentes.jpeg" width="100%">
 
 ### 3.5. Elección de Tecnología
 Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
