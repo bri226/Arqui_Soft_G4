@@ -25,5 +25,7 @@ El patrón de publicación/suscripción (pub/sub) consiste en un método de mens
 
 ## Video
 
+URL repositorio: https://github.com/20191288/signalr-pubsub-demo.git
+
 https://github.com/ulima-arqui-sw/grupo04/assets/103280082/1e3fcbad-33a2-410a-ac13-5579b4843074
 
