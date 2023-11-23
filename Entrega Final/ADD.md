@@ -30,6 +30,28 @@
 | SQ-09  | Portabilidad | Mantenimiento de Funcionalidad Después de Cambios en el Tamaño de la Vista | ESC-7: Cambio en el Tamaño de la Vista |
 | SQ-10  | Rendimiento | Tiempo de Inactividad Mínimo en Despliegue de Cambios | ESC-8: Despliegue de Nuevo Requerimiento |
 
+### Restricciones
+### Restricciones
+| Código | Restricción |
+|--------|-------------|
+| CON-1  | El sistema debe operar con normalidad en todo momento. |
+| CON-2  | Durante el cambio de base de datos por decisión estratégica, se debe minimizar el tiempo de inactividad. |
+| CON-3  | Los cambios en la interfaz de usuario no deben causar interrupciones en el servicio. |
+| CON-4  | El sistema debe iniciar sesión en caso de que el registro sea correcto; de lo contrario, mostrar un mensaje genérico sin detalles del error. |
+| CON-5  | En caso de fallo en servicios externos, el sistema debe notificar al usuario y seguir operando. |
+| CON-6  | La copia de seguridad debe completarse sin pérdida de datos. |
+| CON-7  | El sistema debe compartir eficientemente información de un pedido entre módulos. |
+| CON-8  | Al recuperar conversaciones en el módulo de mensajería, el sistema debe presentarlas de manera completa y rápida, asegurando la integridad de los mensajes. |
+| CON-9  | Los componentes deben redimensionarse automáticamente sin perder funcionalidad ni consistencia visual. |
+| CON-10 | Durante el despliegue de nuevos cambios, el sistema debe tener un tiempo de inactividad mínimo para no romper los SLAs. |
+
+
+### Preocupaciones a nivel de arquitectura
+| Código | Descripción | 
+|--------|----------|
+|CRN-01 | Establecer una estructura inicial del sistema.
+|CRN-02 | Aprovechar el conocimiento del equipo en react, tailwind css, node js y express js.
+|CRN-03 | Asignar trabajo a los miembros del equipo.
 
 
 ## Iteración 2: Identificar estructuras que soporten funcionalidad primaria
