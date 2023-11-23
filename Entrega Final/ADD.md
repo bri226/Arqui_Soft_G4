@@ -17,12 +17,20 @@
 
 
 ### Escenario de atributos de calidad
-
-
-
 | Código | Atributo | Escenario | Caso de Uso Asociado |
-| ------ | -------- | --------- | -------------------- |
-|123|Disponibilidad|El sistema debe estar disponible para el usuario en todo momento|1|
+|--------|----------|-----------|----------------------|
+| SQ-01  | Seguridad | Detección de Intento de Acceso no Autorizado | ESC-3: Inicio de Sesión |
+| SQ-02  | Mantenibilidad | Implementación de un Parche de Seguridad | ESC-8: Despliegue de Nuevo Requerimiento |
+| SQ-03  | Disponibilidad | Manejo de Fallas en Servicios Externos | ESC-05: Manejo de Fallos en Servicios Externos |
+| SQ-04  | Fiabilidad | Copia de Seguridad sin Pérdida de Datos | ESC-4: Política de Respaldo |
+| SQ-05  | Escalabilidad | Manejo Eficiente de Grandes Volúmenes de Datos | ESC-5: Procesamiento de la Compra |
+| SQ-06  | Usabilidad | Evaluación de Cambios en la Interfaz de Usuario | ESC-2: Cambios en la Interfaz de Usuario |
+| SQ-07  | Eficiencia | Procesamiento Eficiente de la Compra | ESC-5: Procesamiento de la Compra |
+| SQ-08  | Interactividad | Recuperación Rápida de Conversaciones en el Módulo de Mensajería | ESC-6: Interacción del Usuario con el Sistema de Chat |
+| SQ-09  | Portabilidad | Mantenimiento de Funcionalidad Después de Cambios en el Tamaño de la Vista | ESC-7: Cambio en el Tamaño de la Vista |
+| SQ-10  | Rendimiento | Tiempo de Inactividad Mínimo en Despliegue de Cambios | ESC-8: Despliegue de Nuevo Requerimiento |
+
+
 
 ## Iteración 2: Identificar estructuras que soporten funcionalidad primaria
 ## Iteración 3: Abordar el escenario
