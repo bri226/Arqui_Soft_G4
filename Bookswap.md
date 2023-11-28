@@ -327,7 +327,14 @@ Se muestra el mapeo de elementos a nivel de despliegue. a arquitectura de la apl
 
 - **Base de datos**  almacena los datos de la aplicación. Está implementada en dos sistemas de gestión de bases de datos: PostgreSQL y MongoDB. La base de datos se ejecuta en un servidor.
 
-<img src="img/diagrama_despliegue.png" width="100%">
+## MODELO C4 NIVEL 1
+<img src="img/C4-NIVEL1.jpeg" width="100%">
+
+## MODELO C4 NIVEL 2
+<img src="img/C4-NIVEL2.jpeg" width="100%">
+
+## MODELO C4 NIVEL 3
+<img src="img/C4-NIVEL3.jpeg" width="100%">
 
 ### 3.5. Elección de Tecnología
 Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
@@ -492,9 +499,55 @@ La seguridad es indispensable ya que la plataforma debe proteger la información
 - **Recuperarse de ataques**
   - Realizar copias de seguridad periódicas de datos críticos y sistemas para facilitar la restauración en caso de un ataque exitoso.
 
-## 5. Anexo: Tópicos en Arquitectura de Software
-## 6. Diagrama de Arquitectura
+## 5. Diagrama de Arquitectura
 <img src="img/DiagramaArq.png" width="100%"/>
+
+## 6. QAW
+
+|ID Escenario|	Fuente Estímulo	|Estímulo|	Artefacto	|Entorno	|Respuesta|Medida de Respuesta|
+|--|---|--|--|--|--|--|
+|ESC-02	|Especialista de despliegue	|Se realiza una actualización de sistema	|Infraestructura del servidor|	Modo seguro	|El sistema debe operar con normalidad	|Downtime por actualización :  5 min|
+|ESC-10	|Jefe de proyectos	|Cambio de base de datos por decisión estratégica	|Base de datos|	Operación normal	|Cambio de base de datos por decisión estratégica	|Tiempo de inactividad y retroalimentación del usuario posterior a la actualización|
+|ESC-11|	Diseñador/ Jefe de proyectos|	Cambios en la interfaz de usuario|	Repositorio del proyecto	|Tiempo de diseño|	El sistema permite visualizar los cambios en la UI sin interrupciones en el servicio.	|Evaluación de la implementación en términos de usabilidad y aceptación del usuario|
+|ESC-04|	Usuario	|Inicio de sesión|	Módulo de inicio de sesión|	Operación normal	|El sistema debe iniciar sesión en caso el registro sea correcto, caso contrario, debe mostrar un mensaje genérico sin dar detalles del error.|	Tiempo de respuesta del sistema y tasa de éxito en la autenticación|
+|ESC-05|	Reporte de usuarios / Notificación de error de la página web	|Falla en servicios externos	|Módulos que dependan del servicios externos( pasarela de pagos)	|Operación normal	|El sistema debe notificar al usuario y seguir operando|	Tiempo de recuperación 
+|ESC-13	|Política de respaldo|	El administrador de la base de datos realiza una copia de seguridad.|	Base de datos	|Operación normal|	El sistema completa la copia de seguridad sin pérdida de datos.	|Tiempo de frecuencia de respaldo: mensual|
+|ESC-15	|Procesamiento de la compra	|Procesar información de compra y enviar al módulo de logística	|Módulo de pagos y logística	|Operación normal	|El sistema comparte eficientemente informacion de un pedido entre modulos	|
+|ESC-20	|Interacción del usuario con sistema de chat	|El usuario desea visualizar una conversación pasada de un tiempo pasado considerable|	Módulo de Mensajería	|Operación normal	|El sistema recupera la conversación solicitada y la presenta de manera completa y rápida, asegurando la integridad de los mensajes	|Tiempo de respuesta para la carga de conversación y tasa de éxito en la recuperación de mensaje|
+|ESC-07	|Diseñador|	Cambio en el tamaño de la vista	|Vista	|Operación normal|	Redimensionamiento automático de los componentes	|Componentes mantienen su funcionabilidad y mantienen su consistencia visual|
+|ESC-19|	Nuevo requerimiento	|Se debe subir un nuevo cambio a producción|	Repositorio del proyecto|	Operación normal|	El sistema debe tener un downtime minimo para no romper los SLAs	|Tiempo de downtime por cada nuevo despliegue: 5 min|
+
+## 7. ADD
+
+### ITERACIONES
+
+#### A. REVISAR LAS ENTRADAS
+
+- **Objetivos principales**
+  - Garantizar la disponibilidad de los datos
+  - Realizar los pagos de manera segura.
+
+#### B. ITERACIONES DE ADD
+
+  - _Identificar el Elemento del Sistema_
+    - Bases de datos
+    - Sistema de pagos
+
+  - _Identificar Requerimientos Relevantes_
+    - Al desplegar las bases de datos en la nube, el proveedor mismo asegura la redundancia y el escalamiento automático de los recursos.
+    - Al realizar los pagos mediante plataforma de pagos, se garantiza interoperabilidad.
+
+  - _Generar un diseño de Solución_
+    - Desplegar las bases de datos MongoDB y PostgreSQL en Azure.
+    - Consumir el API de Niubiz para realizar pagos.
+    - Abordar los requerimientos de atributos de calidad restantes.
+
+  - _Verificar requerimiento_
+    - Se han verificado los requerimientos, pero algunos siguen generando errores..
+
+  - _Repetir el proceso_
+    - Hay requerimientos más complejos y costosos cuya posibilidad de implementación se evaluará.
+
 
 ## 7. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
