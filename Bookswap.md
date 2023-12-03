@@ -517,37 +517,103 @@ La seguridad es indispensable ya que la plataforma debe proteger la información
 |ESC-07	|Diseñador|	Cambio en el tamaño de la vista	|Vista	|Operación normal|	Redimensionamiento automático de los componentes	|Componentes mantienen su funcionabilidad y mantienen su consistencia visual|
 |ESC-19|	Nuevo requerimiento	|Se debe subir un nuevo cambio a producción|	Repositorio del proyecto|	Operación normal|	El sistema debe tener un downtime minimo para no romper los SLAs	|Tiempo de downtime por cada nuevo despliegue: 5 min|
 
-## 7. ADD
+## 7. ARCHITECTURAL DESIGN DECISIONS  (ADD)
 
-### ITERACIONES
+El diseño de arquitectura nos ayudará a definir la estructura general del software, la organización de los diversos componentes, para que el software cumpla los atributos de calidad que permitan un funcionamiento adecuado del aplicativo web, además de garantizar que el software cumpla con los estándares de rendimiento y calidad requeridos. El ADD servirá de guía para el desarrollo del software en general.
 
-#### A. REVISAR LAS ENTRADAS
+### 7.1. ENTRADAS DEL ADD
 
-- **Objetivos principales**
-  - Garantizar la disponibilidad de los datos
-  - Realizar los pagos de manera segura.
+#### DRIVERS DE ARQUITECTURA
 
-#### B. ITERACIONES DE ADD
+- **Propósito**:
+*Depende de los objetivos de negocio relacionados*
+- **Atributos de calidad**:
+*Los que tienen impacto más significativo en la arquitectura. Los que nos arroja el QAW.
+Documentar árboles de utilidad para priorizarlos.*
+- **Funcionalidad primaria**: El 10% de los casos de uso más importantes.
+- **Preocupaciones a nivel de arquitectura:** Aspectos adicionales que no se expresan como requerimientos tradicionales.
+- **Restricciones**: Técnicas (tecnologías obligados a adoptar, integraciones con otros sistemas) y no técnicas (temas regulatorios).
 
-  - _Identificar el Elemento del Sistema_
-    - Bases de datos
-    - Sistema de pagos
+#### CONCEPTOS DE DISEÑO
 
-  - _Identificar Requerimientos Relevantes_
-    - Al desplegar las bases de datos en la nube, el proveedor mismo asegura la redundancia y el escalamiento automático de los recursos.
-    - Al realizar los pagos mediante plataforma de pagos, se garantiza interoperabilidad.
+- **Arquitecturas de Referencia**:
+- **Patrones de arquitectura**
+- **Patrones de Despliegue**
+- **Tácticas**
+- **Componentes Desarrollados externamente** (Familia de tecnologías, productos, frameworks de aplicación, nubes)
+- **Decisiones de Diseño de Arquitectura**: Seleccionar la mejor opción.
 
-  - _Generar un diseño de Solución_
-    - Desplegar las bases de datos MongoDB y PostgreSQL en Azure.
-    - Consumir el API de Niubiz para realizar pagos.
-    - Abordar los requerimientos de atributos de calidad restantes.
+### 7.2. REVISAR LAS ENTRADAS
 
-  - _Verificar requerimiento_
-    - Se han verificado los requerimientos, pero algunos siguen generando errores..
+### 7.3. ITERACIONES
+Se realizarán tres iteraciones, cuyos pasos 1 (objetivo de la iteración), 2 (elemento del sistema a refinar), 3 (elección de elemento del sistema a refinar), 4 (concepto de diseño que satisfacen el driver seleccionado) se resumirán en la siguiente tabla. En cada iteración se describirá el detalle.
+| ITERACIÓN | OBJETIVO | ELEMENTO | ELECCIÓN DE ELEMENTO | CONCEPTO DE DISEÑO |
+|---|---|---|---|---|
+|1 |   |   |   |   |
+|2 |   |   |   |   |
+|3 |   |   |   |   |
 
-  - _Repetir el proceso_
-    - Hay requerimientos más complejos y costosos cuya posibilidad de implementación se evaluará.
+#### ITERACIÓN 1
 
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
+
+#### ITERACIÓN 2
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
+
+#### ITERACIÓN 3
+
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
 
 ## 7. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
