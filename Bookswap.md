@@ -318,16 +318,23 @@ Se utilizará para almacenar datos menos estructurados, como registros de activi
 ```
 
 ### 3.4. Mapeo entre Elementos de Arquitectura
-Se muestra el mapeo de elementos a 3 niveles.
+Se muestra el mapeo de elementos a nivel de despliegue. a arquitectura de la aplicación web es de tres capas y se divide en:
 
-En el nivel 1 se muestra como el Usuario se comunica con el sistema Bookswap, y como este se comunica con sistemas externos.
-<img src="img/n1-sistemas.jpeg" width="100%">
+- **Front-end**, es la capa que los usuarios ven y con la que interactúan. Está implementado en React.js. El front-end se ejecuta en el navegador del usuario.
 
-En el nivel 2 se muestra a nivel de contenedores, donde se ve a detalle la comunicación interna que realiza el sistema Bookswap.
-<img src="img/n2-contenedores.jpeg" width="100%">
 
-En el nivel 3 se puede ver los módulos con el que cuenta la aplicación y la comunicación que tienen con los sistemas y componentes externos.
-<img src="img/n3-componentes.jpeg" width="100%">
+- **Back-end** de la aplicación es la capa que proporciona acceso a los datos y funcionalidades de la aplicación. Está implementado en express.js con Javascript como lenguaje de programación. El API se ejecuta en un servidor.
+
+- **Base de datos**  almacena los datos de la aplicación. Está implementada en dos sistemas de gestión de bases de datos: PostgreSQL y MongoDB. La base de datos se ejecuta en un servidor.
+
+## MODELO C4 NIVEL 1
+<img src="img/C4-NIVEL1.jpeg" width="100%">
+
+## MODELO C4 NIVEL 2
+<img src="img/C4-NIVEL2.jpeg" width="100%">
+
+## MODELO C4 NIVEL 3
+<img src="img/C4-NIVEL3.jpeg" width="100%">
 
 ### 3.5. Elección de Tecnología
 Para el desarrollo del sistema, se han seleccionado las siguientes tecnologías:
@@ -492,9 +499,121 @@ La seguridad es indispensable ya que la plataforma debe proteger la información
 - **Recuperarse de ataques**
   - Realizar copias de seguridad periódicas de datos críticos y sistemas para facilitar la restauración en caso de un ataque exitoso.
 
-## 5. Anexo: Tópicos en Arquitectura de Software
-## 6. Diagrama de Arquitectura
+## 5. Diagrama de Arquitectura
 <img src="img/DiagramaArq.png" width="100%"/>
+
+## 6. QAW
+
+|ID Escenario|	Fuente Estímulo	|Estímulo|	Artefacto	|Entorno	|Respuesta|Medida de Respuesta|
+|--|---|--|--|--|--|--|
+|ESC-02	|Especialista de despliegue	|Se realiza una actualización de sistema	|Infraestructura del servidor|	Modo seguro	|El sistema debe operar con normalidad	|Downtime por actualización :  5 min|
+|ESC-10	|Jefe de proyectos	|Cambio de base de datos por decisión estratégica	|Base de datos|	Operación normal	|Cambio de base de datos por decisión estratégica	|Tiempo de inactividad y retroalimentación del usuario posterior a la actualización|
+|ESC-11|	Diseñador/ Jefe de proyectos|	Cambios en la interfaz de usuario|	Repositorio del proyecto	|Tiempo de diseño|	El sistema permite visualizar los cambios en la UI sin interrupciones en el servicio.	|Evaluación de la implementación en términos de usabilidad y aceptación del usuario|
+|ESC-04|	Usuario	|Inicio de sesión|	Módulo de inicio de sesión|	Operación normal	|El sistema debe iniciar sesión en caso el registro sea correcto, caso contrario, debe mostrar un mensaje genérico sin dar detalles del error.|	Tiempo de respuesta del sistema y tasa de éxito en la autenticación|
+|ESC-05|	Reporte de usuarios / Notificación de error de la página web	|Falla en servicios externos	|Módulos que dependan del servicios externos( pasarela de pagos)	|Operación normal	|El sistema debe notificar al usuario y seguir operando|	Tiempo de recuperación 
+|ESC-13	|Política de respaldo|	El administrador de la base de datos realiza una copia de seguridad.|	Base de datos	|Operación normal|	El sistema completa la copia de seguridad sin pérdida de datos.	|Tiempo de frecuencia de respaldo: mensual|
+|ESC-15	|Procesamiento de la compra	|Procesar información de compra y enviar al módulo de logística	|Módulo de pagos y logística	|Operación normal	|El sistema comparte eficientemente informacion de un pedido entre modulos	|
+|ESC-20	|Interacción del usuario con sistema de chat	|El usuario desea visualizar una conversación pasada de un tiempo pasado considerable|	Módulo de Mensajería	|Operación normal	|El sistema recupera la conversación solicitada y la presenta de manera completa y rápida, asegurando la integridad de los mensajes	|Tiempo de respuesta para la carga de conversación y tasa de éxito en la recuperación de mensaje|
+|ESC-07	|Diseñador|	Cambio en el tamaño de la vista	|Vista	|Operación normal|	Redimensionamiento automático de los componentes	|Componentes mantienen su funcionabilidad y mantienen su consistencia visual|
+|ESC-19|	Nuevo requerimiento	|Se debe subir un nuevo cambio a producción|	Repositorio del proyecto|	Operación normal|	El sistema debe tener un downtime minimo para no romper los SLAs	|Tiempo de downtime por cada nuevo despliegue: 5 min|
+
+## 7. ARCHITECTURAL DESIGN DECISIONS  (ADD)
+
+El diseño de arquitectura nos ayudará a definir la estructura general del software, la organización de los diversos componentes, para que el software cumpla los atributos de calidad que permitan un funcionamiento adecuado del aplicativo web, además de garantizar que el software cumpla con los estándares de rendimiento y calidad requeridos. El ADD servirá de guía para el desarrollo del software en general.
+
+### 7.1. ENTRADAS DEL ADD
+
+#### DRIVERS DE ARQUITECTURA
+
+- **Propósito**:
+*Depende de los objetivos de negocio relacionados*
+- **Atributos de calidad**:
+*Los que tienen impacto más significativo en la arquitectura. Los que nos arroja el QAW.
+Documentar árboles de utilidad para priorizarlos.*
+- **Funcionalidad primaria**: El 10% de los casos de uso más importantes.
+- **Preocupaciones a nivel de arquitectura:** Aspectos adicionales que no se expresan como requerimientos tradicionales.
+- **Restricciones**: Técnicas (tecnologías obligados a adoptar, integraciones con otros sistemas) y no técnicas (temas regulatorios).
+
+#### CONCEPTOS DE DISEÑO
+
+- **Arquitecturas de Referencia**:
+- **Patrones de arquitectura**
+- **Patrones de Despliegue**
+- **Tácticas**
+- **Componentes Desarrollados externamente** (Familia de tecnologías, productos, frameworks de aplicación, nubes)
+- **Decisiones de Diseño de Arquitectura**: Seleccionar la mejor opción.
+
+### 7.2. REVISAR LAS ENTRADAS
+
+### 7.3. ITERACIONES
+Se realizarán tres iteraciones, cuyos pasos 1 (objetivo de la iteración), 2 (elemento del sistema a refinar), 3 (elección de elemento del sistema a refinar), 4 (concepto de diseño que satisfacen el driver seleccionado) se resumirán en la siguiente tabla. En cada iteración se describirá el detalle.
+| ITERACIÓN | OBJETIVO | ELEMENTO | ELECCIÓN DE ELEMENTO | CONCEPTO DE DISEÑO |
+|---|---|---|---|---|
+|1 |   |   |   |   |
+|2 |   |   |   |   |
+|3 |   |   |   |   |
+
+#### ITERACIÓN 1
+
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
+
+#### ITERACIÓN 2
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
+
+#### ITERACIÓN 3
+
+PASO 1: Objetivo de iteración
+
+PASO 2: Elemento del sistema a refinar
+
+PASO 3: Elegir uno o más elementos del sistema a refinar
+
+PASO 4: Elegir concepto(s) de diseño que satisfacen driver seleccionado
+
+PASO 5: Instancias elementos de arquitectura, asignar responsabilidad y definir interfaces (diagrama de secuencia o de interacción)
+
+PASO 6: Bosquejo de vistas y registro de decisiones de diseño
+Aquí va las tablas de decisiones de diseño.
+| Driver | Decisiones de diseño y ubicación | Justificación y suspuestos | 
+|----|----|----|
+|QA-1|Introducir concurrencia (táctica) en TimeServerConnector y FaultDetectionService | Se debe introducir la concurrencia para poder recibir y procesar varios eventos en simultáneo | 
+|QA-2| Uso de un patrón de mensajería mediante la introducción de una cola de mensajes en la capa de comunicaciones| Aunque el uso de una cola de mensajes puede parecer ir en contra del rendimiento impuesto por el escenario, se eligió una cola de mensajes porque algunas implementaciones tienen un alto rendimiento y además, será útil para soportar el QA-3|
+
+PASO 7: ANÁLISIS DEL DISEÑO ACTUAL, REVISAR OBJETIVO DE ITERACIÓN Y LOGRO DEL PROPÓSITO DEL DISEÑO
 
 ## 7. REFERENCIAS
 Desafíos PWC (2022). Libros en el Perú: un mercado de 20 millones de dólares. https://desafios.pwc.pe/libros-en-el-peru-un-mercado-de-20-millones-de-dolares/
